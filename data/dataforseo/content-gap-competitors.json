@@ -1,0 +1,46 @@
+{
+  "_meta": {
+    "source": "DataForSEO serp_organic_live_advanced (TR, desktop)",
+    "captured": "2026-06-15",
+    "purpose": "Content-gap keyword'lerinde HANGI rakiplerin siralandigini gosterir. 'turkcell one' SERP top-10 platform-adi yerine, dusuk zorluktaki 'fiyat/uyelik/paketleri' kelimelerinde operator rakiplerin gorunurlugu."
+  },
+  "keywords": [
+    {
+      "keyword": "amazon prime üyelik",
+      "search_volume": 60500, "keyword_difficulty": 6,
+      "ai_overview": false,
+      "ranking_competitors": [
+        {"rank": 1, "owner": "Amazon.com.tr (resmi)", "url": "amazon.com.tr/prime"},
+        {"rank": 6, "owner": "Vodafone", "url": "vodafone.com.tr/kampanyalar/amazon-prime-uyeliginiz-ilk-3-ay-vodafonedan", "note": "Operator kampanya sayfasi ile siralaniyor"},
+        {"rank": 11, "owner": "DonanımHaber", "url": "donanimhaber.com/amazon-prime-nasil-uye-olunur--134348"}
+      ],
+      "related_searches": ["Amazon Prime üyelik iptali", "Amazon Prime üyelik paketleri", "Amazon Prime üyelik satın al", "Amazon Prime üyelik Nasıl yapılır"]
+    },
+    {
+      "keyword": "netflix paketleri",
+      "search_volume": 6600, "keyword_difficulty": 15,
+      "ai_overview": false,
+      "ranking_competitors": [
+        {"rank": 1, "owner": "Netflix (resmi)", "url": "netflix.com/signup"},
+        {"rank": 5, "owner": "Webtekno", "url": "webtekno.com/netflix-uyelik-ucretleri-h87227.html"},
+        {"rank": 6, "owner": "Vodafone", "url": "vodafone.com.tr/red/blog/netflix-paketleri", "note": "Operator blog ile siralaniyor"},
+        {"rank": 8, "owner": "Türk Telekom", "url": "bireysel.turktelekom.com.tr/.../prime-netflix-30-gb", "note": "Netflix'li tarife sayfasi ile siralaniyor"}
+      ],
+      "related_searches": ["Netflix üyelik paketleri yıllık", "Netflix paket özellikleri", "Netflix aile paketi", "Netflix plan değiştirme"]
+    },
+    {
+      "keyword": "hbo max fiyat",
+      "search_volume": 5400, "keyword_difficulty": 3,
+      "ai_overview": true,
+      "ai_overview_sources": ["Webtekno", "Tamindir", "Medyascope", "Technopat", "Hepsiburada"],
+      "ranking_competitors": [
+        {"rank": 1, "owner": "HBO Max (resmi)", "url": "hbomax.com/tr/tr"},
+        {"rank": 7, "owner": "Hepsiburada", "url": "hepsiburada.com/premium", "note": "HBO Max'i uyelik avantaji olarak sunuyor"},
+        {"rank": 8, "owner": "Webtekno", "url": "webtekno.com/max-nedir-nasil-kullanilir-ucreti-h158390.html"},
+        {"rank": 9, "owner": "Turkcell", "url": "turkcell.com.tr/kampanya/tvplus-hbo-max/", "note": "Turkcell ZATEN TV+ HBO Max kampanya sayfasi ile siralaniyor"}
+      ],
+      "related_searches": ["HBO Max fiyat öğrenci", "HBO Max fiyat Hepsiburada", "Hbo max fiyat 2026", "HBO Max TV Plus"]
+    }
+  ],
+  "reading": "Operator rakipler (Vodafone, Türk Telekom) bu dusuk-zorluk 'fiyat/uyelik/paketleri' kelimelerinde kampanya/blog/tarife sayfalariyla zaten siralaniyor. Turkcell de 'hbo max fiyat' civarinda TV+ HBO Max kampanya sayfasi ile gorunuyor. Bu, Turkcell One hub'inin ayni desenle bu talebi yakalayip One'a kopruleyebilecegini gosteriyor. Platform ANA adlari (netflix, hbo max) resmi siteler + AI Overview ile cok rekabetci; bu yuzden odak dusuk-zorluk uzun kuyruk."
+}
