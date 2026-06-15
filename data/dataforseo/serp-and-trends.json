@@ -1,0 +1,58 @@
+{
+  "_meta": {
+    "source": "DataForSEO serp_organic_live_advanced + kw_data_google_trends_explore",
+    "location": "Turkiye (2792)", "language": "tr", "device": "desktop", "captured": "2026-06-15"
+  },
+  "serp_turkcell_one": {
+    "note": "Bu cekimde ust reklam (paid) item donmedi; reklam yogunlugu gun/saat bazinda degisebilir.",
+    "items": [
+      {"rank_absolute": 1, "type": "organic", "owner": "Turkcell", "title": "Turkcell One Plus", "url": "https://www.turkcell.com.tr/paket-ve-tarifeler/turkcell-one/turkcell-one-plus", "price": "₺600,00"},
+      {"rank_absolute": 2, "type": "organic", "owner": "Turkcell", "title": "Turkcell One ile üyeliklerini tek yerden yönet (hub)", "url": "https://www.turkcell.com.tr/turkcellone/", "price": "₺500,00 - ₺690,00"},
+      {"rank_absolute": 3, "type": "people_also_ask", "questions": ["Turkcell One nedir?", "1 aylık vınn var mı?", "Turkcell'in en ucuz paketi hangisi?", "Turkcell 20 GB 1000 dk 1000 SMS paketi nedir?", "Turkcell'de 1 yıllık paket ne kadar?"]},
+      {"rank_absolute": 4, "type": "organic", "owner": "Ekşi Sözlük", "url": "https://eksisozluk.com/turkcell-one--8107934"},
+      {"rank_absolute": 5, "type": "organic", "owner": "DonanımHaber", "url": "https://www.donanimhaber.com/turkcell-one-tek-abonelikle-netflix-youtube-hbo-max-bir-arada--206627", "snippet": "Turkcell One Mega (330 TL): Netflix Temel, Amazon Prime, Lifebox 250GB, Wonjo Kids, YouTube Premium(Bireysel üyelik)"},
+      {"rank_absolute": 6, "type": "organic", "owner": "Turkcell", "title": "Faturalı Tarifeler (One Maksi 430 TL)", "url": "https://www.turkcell.com.tr/paket-ve-tarifeler/faturali-hat"},
+      {"rank_absolute": 7, "type": "organic", "owner": "Şikayetvar", "title": "Turkcell One Şikayetleri", "url": "https://www.sikayetvar.com/turkcell/one", "rating": {"value": 1.5, "max": 5, "votes": 13210}},
+      {"rank_absolute": 8, "type": "organic", "owner": "Webtekno", "url": "https://www.webtekno.com/turkcell-netflix-hbo-max-prime-video-youtube-premium-ortak-abonelik-paketi-duyurdu-h218160.html"},
+      {"rank_absolute": 10, "type": "organic", "owner": "Turkcell", "title": "Turkcell Pasaj (Turkcell One Paketlerini Keşfet)", "url": "https://www.turkcell.com.tr/pasaj"}
+    ],
+    "sitelink_paket_isimleri": ["Turkcell One Plus", "Turkcell One Ultra", "Turkcell One Star"]
+  },
+  "serp_turkcell_one_nedir": {
+    "ai_overview": {
+      "present": true,
+      "definition_sources": ["Webtekno", "Instagram (technowavetr/webtekno)", "DonanımHaber"],
+      "package_breakdown_source": ["Webtekno"],
+      "subscribe_step_sources": ["Turkcell (turkcellone/)", "Webtekno"],
+      "reading": "AI Overview'in TANIM ve paket otoritesi ucuncu taraf yayincilarda (Webtekno + Instagram + DonanımHaber). Turkcell yalnizca 'sayfayi ziyaret et / abone ol' adiminda atif aliyor.",
+      "definition_text": "Turkcell One, Netflix, HBO Max, Amazon Prime ve YouTube Premium gibi popüler dijital içerik ve yayın platformlarını tek faturada birleştiren ortak bir abonelik paketidir. Tek tek üye olma derdini ortadan kaldırır ve 12 ay boyunca sabit fiyat avantajı sunar."
+    },
+    "organic_top": [
+      {"rank": 1, "owner": "Turkcell", "title": "Turkcell One Paketleri (liste)", "url": "https://www.turkcell.com.tr/paket-ve-tarifeler/turkcell-one", "sitelinks": ["One Plus", "One Ultra", "One Star"]},
+      {"rank": 2, "owner": "Turkcell", "title": "hub", "url": "https://www.turkcell.com.tr/turkcellone/"},
+      {"rank": 3, "owner": "Ekşi Sözlük"},
+      {"rank": 4, "owner": "Webtekno"},
+      {"rank": 5, "owner": "Instagram (technowavetr)"}
+    ]
+  },
+  "trends_90d": {
+    "graph_peak_date": "2026-06-09",
+    "graph_values": [
+      {"date": "2026-06-01", "v": 3}, {"date": "2026-06-02", "v": 10}, {"date": "2026-06-03", "v": 11},
+      {"date": "2026-06-04", "v": 10}, {"date": "2026-06-05", "v": 11}, {"date": "2026-06-06", "v": 10},
+      {"date": "2026-06-07", "v": 8}, {"date": "2026-06-08", "v": 16}, {"date": "2026-06-09", "v": 100},
+      {"date": "2026-06-10", "v": 96}, {"date": "2026-06-11", "v": 55}, {"date": "2026-06-12", "v": 61},
+      {"date": "2026-06-13", "v": 23}, {"date": "2026-06-14", "v": 14}, {"date": "2026-06-15", "v": 18}
+    ],
+    "note": "Mart-Mayis araliginda olcum esiginin altinda (deger yok). Lansman kaynakli sicrama 9 Haziran (100), ardindan normalizasyon.",
+    "regions_top": [
+      {"region": "Konya", "v": 100}, {"region": "İstanbul", "v": 29}, {"region": "Ordu", "v": 22},
+      {"region": "Trabzon", "v": 21}, {"region": "Eskişehir", "v": 21}, {"region": "Ankara", "v": 21},
+      {"region": "İzmir", "v": 19}
+    ],
+    "related_queries_top": ["turkcell netflix", "hbo", "netflix", "turkcell one plus", "turkcell plus", "turkcell one premium", "hbo max", "youtube premium", "google one", "youtube premium fiyat", "netflix fiyat", "netflix paketleri"],
+    "related_topics_rising": ["Turkcell", "HBO / HBO Max", "Ekşi Sözlük", "5G", "YouTube Premium", "Para İadesi (cashback)", "TV PLUS", "Amazon Prime Video"],
+    "related_topics_note": "google_trends_topics_list (yükselen). Onceki surumdeki 'Samsung' kaynak veride yok; kaldirildi. 5G ve Para Iadesi gercek yukselen konulardir.",
+    "google_one_confusion": true
+  }
+}

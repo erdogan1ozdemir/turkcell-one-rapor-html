@@ -1,0 +1,27 @@
+{
+  "_meta": {
+    "source": "DataForSEO (Google Ads search_volume + DataForSEO Labs keyword_overview)",
+    "location": "Turkiye (location_code 2792)",
+    "language": "tr",
+    "captured": "2026-06-15",
+    "note": "search_volume = current (Google Ads, includes 2026-05); keyword_difficulty = DataForSEO Labs (0-100). Ahrefs degerleri rapor v3'te capraz dogrulama icin tutulmustur."
+  },
+  "keywords": [
+    {"keyword": "netflix", "search_volume": 2740000, "keyword_difficulty": 75, "intent": "navigational", "competition": "LOW", "ahrefs_volume_v3": 2150000, "ahrefs_kd_v3": 61, "scope": "dolayli"},
+    {"keyword": "amazon prime", "search_volume": 450000, "keyword_difficulty": 36, "intent": "commercial", "competition": "LOW", "ahrefs_volume_v3": 305000, "ahrefs_kd_v3": 26, "scope": "dolayli"},
+    {"keyword": "hbo max", "search_volume": 368000, "keyword_difficulty": 22, "intent": "navigational", "competition": "LOW", "ahrefs_volume_v3": 260000, "ahrefs_kd_v3": 30, "scope": "var"},
+    {"keyword": "disney plus", "search_volume": 301000, "keyword_difficulty": 48, "intent": "navigational", "competition": "MEDIUM", "ahrefs_volume_v3": 196000, "ahrefs_kd_v3": 50, "scope": "kapsam-disi"},
+    {"keyword": "youtube premium", "search_volume": 165000, "keyword_difficulty": 24, "intent": "informational", "competition": "LOW", "ahrefs_volume_v3": 88000, "ahrefs_kd_v3": 31, "scope": "var"},
+    {"keyword": "amazon prime uyelik", "search_volume": 60500, "keyword_difficulty": 6, "intent": "commercial", "competition": "MEDIUM", "ahrefs_volume_v3": 22000, "ahrefs_kd_v3": 3, "scope": "var"},
+    {"keyword": "netflix fiyat", "search_volume": 49500, "keyword_difficulty": 11, "intent": "commercial", "competition": "LOW", "ahrefs_volume_v3": 51000, "ahrefs_kd_v3": 44, "scope": "var"},
+    {"keyword": "youtube premium fiyat", "search_volume": 27100, "keyword_difficulty": 18, "intent": "commercial", "competition": "LOW", "ahrefs_volume_v3": 26000, "ahrefs_kd_v3": 1, "scope": "var"},
+    {"keyword": "netflix paketleri", "search_volume": 6600, "keyword_difficulty": 15, "intent": "commercial", "competition": "LOW", "ahrefs_volume_v3": 7400, "ahrefs_kd_v3": 53, "scope": "var"},
+    {"keyword": "hbo max fiyat", "search_volume": 5400, "keyword_difficulty": 3, "intent": "commercial", "competition": "MEDIUM", "ahrefs_volume_v3": 8200, "ahrefs_kd_v3": 23, "scope": "var"},
+    {"keyword": "youtube premium turkiye", "search_volume": 2900, "keyword_difficulty": 26, "intent": "commercial", "competition": "LOW", "ahrefs_volume_v3": 1900, "ahrefs_kd_v3": 4, "scope": "var"},
+    {"keyword": "tv+ izle", "search_volume": 2900, "keyword_difficulty": null, "intent": null, "competition": "LOW", "ahrefs_volume_v3": 1100, "ahrefs_kd_v3": 58, "scope": "var"},
+    {"keyword": "netflix abonelik", "search_volume": 2400, "keyword_difficulty": 14, "intent": "transactional", "competition": "LOW", "ahrefs_volume_v3": 1800, "ahrefs_kd_v3": 40, "scope": "var"},
+    {"keyword": "spotify premium fiyat", "search_volume": 1600, "keyword_difficulty": 5, "intent": "commercial", "competition": "LOW", "ahrefs_volume_v3": 1300, "ahrefs_kd_v3": 1, "scope": "kapsam-disi"},
+    {"keyword": "netflix turkcell", "search_volume": 70, "keyword_difficulty": null, "intent": null, "competition": "MEDIUM", "ahrefs_volume_v3": 40, "ahrefs_kd_v3": 0, "scope": "marka-kopru"},
+    {"keyword": "turkcell one", "search_volume": 30, "search_volume_2026_05": 260, "keyword_difficulty": null, "intent": null, "competition": "LOW", "note": "Marka talebi olusuyor: aylik aramalar 10 -> 50 (Nis) -> 260 (May 2026). Long-tail varyantlar (paketleri/nedir/fiyat/premium) DataForSEO DB'sinde henuz yok."}
+  ]
+}

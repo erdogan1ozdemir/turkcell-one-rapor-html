@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Turkcell One · Rakip Analizi & SEO / GEO Değerlendirmesi</title>
+<meta name="description" content="Turkcell One dijital abonelik bundle sayfaları için rakip benchmark, SERP ve AI Overview görünürlüğü, talep havuzu ve content gap, sosyal duygu, CRO/UX ve sayfa içi değerlendirme." />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+:root{
+  --navy:#1a4290; --navy-deep:#0a2150; --blue:#1d5aff; --blue-soft:#e7edff;
+  --cyan:#00c2ff; --cyan-soft:#e0f7ff; --yellow:#ffd400; --yellow-deep:#f2b600; --yellow-soft:#fff4cc;
+  --coral:#ff6b5b; --coral-soft:#ffe7e3; --coral-deep:#e2503f;
+  --bg:#f3f6fc; --surface:#ffffff; --surface-2:#f7f9fd; --surface-3:#e9eefb;
+  --ink:#16233f; --ink-2:#5a6783; --ink-3:#8d99b2; --line:#e4eaf4; --line-soft:#eef2f9;
+  --green:#1f9d57; --green-soft:#dff5e8; --red:#d8463c; --red-soft:#fde6e4; --amber:#d98a00; --amber-soft:#fdf0d6;
+  --r-sm:10px; --r-md:14px; --r-lg:18px; --r-xl:22px; --r-pill:999px;
+  --shadow:0 1px 3px rgba(16,35,63,.06),0 1px 2px rgba(16,35,63,.04);
+  --shadow-h:0 10px 30px rgba(16,35,63,.10),0 3px 8px rgba(16,35,63,.05);
+  --shadow-pop:0 20px 56px rgba(10,33,80,.22);
+  --maxw:1200px;
+  --font:"Segoe UI",system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);background:
+  radial-gradient(1200px 520px at 85% -8%,rgba(0,194,255,.10),transparent 60%),
+  radial-gradient(900px 480px at -5% 2%,rgba(29,90,255,.08),transparent 55%),
+  var(--bg);color:var(--ink);line-height:1.62;font-size:15.5px;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{color:var(--navy-deep);line-height:1.2;font-weight:800;letter-spacing:-.01em}
+a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}
+img{max-width:100%;display:block}
+
+.appbar{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.appbar__in{max-width:var(--maxw);margin:0 auto;padding:11px 22px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.logo{display:flex;align-items:center;gap:11px}
+.logo svg{flex:none;filter:drop-shadow(0 4px 10px rgba(26,66,144,.25))}
+.logo__txt{display:flex;flex-direction:column;line-height:1.1}
+.logo__txt b{font-size:1.06rem;color:var(--navy-deep);font-weight:800;letter-spacing:-.02em}
+.logo__txt b span{color:var(--yellow-deep)}
+.logo__txt small{font-size:.7rem;color:var(--ink-3);font-weight:600}
+.appbar__meta{margin-left:auto;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.chip{background:var(--surface-2);border:1px solid var(--line);padding:5px 11px;border-radius:var(--r-pill);font-weight:600;font-size:.76rem;color:var(--ink-2);white-space:nowrap}
+.chip--solid{background:var(--navy);color:#fff;border-color:transparent}
+
+.layout{max-width:var(--maxw);margin:0 auto;display:grid;grid-template-columns:230px 1fr;gap:24px;padding:24px 22px 80px}
+.sidenav{position:sticky;top:74px;align-self:start;height:fit-content;max-height:calc(100vh - 92px);overflow:auto;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:13px;box-shadow:var(--shadow)}
+.sidenav h4{font-size:.66rem;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-3);margin:2px 8px 9px}
+.sidenav a{display:flex;align-items:center;gap:9px;padding:7px 11px;border-radius:10px;color:var(--ink-2);font-size:.83rem;font-weight:600;transition:.15s}
+.sidenav a:hover{background:var(--surface-2);color:var(--navy);text-decoration:none}
+.sidenav a.active{background:var(--blue-soft);color:var(--navy)}
+.sidenav a .n{width:20px;height:20px;border-radius:6px;background:var(--surface-2);color:var(--ink-3);font-size:.64rem;font-weight:800;display:grid;place-items:center;flex:none}
+.sidenav a.active .n{background:var(--navy);color:#fff}
+main{min-width:0}
+
+.section{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-xl);padding:28px 30px;margin-bottom:20px;box-shadow:var(--shadow);scroll-margin-top:78px}
+.eyebrow{display:inline-flex;align-items:center;gap:7px;font-size:.7rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--blue);margin-bottom:11px}
+.eyebrow::before{content:"";width:18px;height:2px;border-radius:2px;background:linear-gradient(90deg,var(--blue),var(--cyan))}
+.section h2{font-size:1.5rem;margin-bottom:7px}
+.section h3{font-size:1.12rem;margin:24px 0 11px}
+.section h4{font-size:.95rem;margin:16px 0 8px;color:var(--navy)}
+.section p{margin-bottom:12px}
+.lead{font-size:1.04rem;color:var(--ink-2)}
+.muted{color:var(--ink-2)}.small{font-size:.82rem;color:var(--ink-3)}
+
+.hero{background:linear-gradient(135deg,#0a2150 0%,#1a4290 48%,#1d5aff 100%);border:none;color:#fff;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;right:-80px;top:-90px;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(255,212,0,.30),transparent 62%)}
+.hero::after{content:"";position:absolute;right:120px;bottom:-120px;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(0,194,255,.30),transparent 62%)}
+.hero h1{color:#fff;font-size:2rem;max-width:790px;position:relative}
+.hero .lead{color:rgba(255,255,255,.92);max-width:770px;position:relative}
+.hero .eyebrow{color:#cfe0ff}.hero .eyebrow::before{background:var(--yellow)}
+.hero__tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px;position:relative}
+.hero__tags .chip{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.22);color:#fff}
+.hero__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:18px 0 4px;position:relative}
+.hero__pt{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.20);border-radius:14px;padding:14px 15px;display:flex;flex-direction:column;gap:5px}
+.hero__pt-k{font-size:.66rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--yellow)}
+.hero__pt b{color:#fff;font-size:1rem}
+.hero__pt-b{color:rgba(255,255,255,.86);font-size:.83rem;line-height:1.45;margin:0}
+.hero .term{color:#fff;border-bottom-color:rgba(255,255,255,.6)}
+@media(max-width:900px){.hero__grid{grid-template-columns:1fr}}
+
+.kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:6px 0 2px}
+.kpi{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:17px 18px;box-shadow:var(--shadow);transition:.18s}
+.kpi:hover{transform:translateY(-2px);box-shadow:var(--shadow-h)}
+.kpi .lab{font-size:.72rem;color:var(--ink-3);font-weight:700;text-transform:uppercase;letter-spacing:.05em}
+.kpi .val{font-size:1.55rem;font-weight:800;color:var(--navy-deep);line-height:1.1;margin-top:7px}
+.kpi .sub{font-size:.73rem;font-weight:700;margin-top:8px;display:inline-flex;align-items:center;gap:5px;padding:3px 9px;border-radius:var(--r-pill)}
+.kpi .sub.up{color:var(--green);background:var(--green-soft)}.kpi .sub.neu{color:var(--blue);background:var(--blue-soft)}.kpi .sub.watch{color:var(--amber);background:var(--amber-soft)}
+.kpi--feat{background:linear-gradient(140deg,var(--navy),var(--blue));border:none}
+.kpi--feat .lab{color:rgba(255,255,255,.82)}.kpi--feat .val{color:#fff}.kpi--feat .sub{background:rgba(255,255,255,.16);color:#fff}
+
+.insight{background:var(--surface-2);border:1px solid var(--line);border-radius:var(--r-md);padding:14px 16px 14px 44px;margin:12px 0;font-size:.95rem;position:relative}
+.insight::before{content:"➔";position:absolute;left:15px;top:13px;color:var(--blue);font-weight:800}
+.insight b{color:var(--navy-deep)}
+.callout{border-radius:var(--r-md);padding:14px 16px;margin:14px 0;font-size:.92rem;border:1px solid}.callout b{font-weight:800}
+.callout--watch{background:var(--amber-soft);border-color:#f1d79a;color:#7a4d05}
+.callout--pos{background:var(--green-soft);border-color:#aee3c3;color:#145232}
+.callout--info{background:var(--blue-soft);border-color:#c3d2ff;color:#13307f}
+
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:var(--surface-2);border:1px solid var(--line);border-radius:var(--r-md);padding:17px;transition:.18s}
+.card:hover{box-shadow:var(--shadow);border-color:#d5deee}.card h4{margin:0 0 7px}
+.tag{font-size:.66rem;font-weight:800;text-transform:uppercase;letter-spacing:.05em;padding:3px 9px;border-radius:var(--r-pill);display:inline-block;margin-bottom:9px}
+.t-ed{background:var(--amber-soft);color:#915800}.t-ugc{background:#efe6fb;color:#6b35c9}.t-op{background:var(--blue-soft);color:var(--navy)}.t-tc{background:var(--yellow-soft);color:#8a6a00}
+
+.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--r-md);margin:14px 0}
+table{width:100%;border-collapse:collapse;font-size:.86rem;min-width:560px}
+thead th{background:var(--navy);color:#fff;text-align:left;padding:11px 13px;font-weight:700;white-space:nowrap;position:sticky;top:0}
+thead th[data-sort]{cursor:pointer;user-select:none}thead th[data-sort]:hover{background:var(--navy-deep)}
+thead th .arr{opacity:.5;font-size:.7rem;margin-left:3px}
+tbody td{padding:10px 13px;border-top:1px solid var(--line);vertical-align:top}
+tbody tr:nth-child(even){background:var(--surface-2)}tbody tr:hover{background:var(--blue-soft)}
+.pill{padding:2px 9px;border-radius:var(--r-pill);font-size:.73rem;font-weight:700;white-space:nowrap;display:inline-block}
+.p-pos{background:var(--green-soft);color:#145232}.p-neg{background:var(--red-soft);color:#8a201a}.p-amber{background:var(--amber-soft);color:#7a4d05}.p-info{background:var(--blue-soft);color:var(--navy)}.p-gray{background:#e9edf4;color:#566}
+.tablefilter{display:flex;gap:8px;align-items:center;margin-top:10px;flex-wrap:wrap}
+.tablefilter input{padding:8px 13px;border:1px solid var(--line);border-radius:9px;font-size:.85rem;width:250px;max-width:100%;font-family:inherit}
+
+.heat td.h{text-align:center;font-weight:800;color:#fff}
+.h-y{background:var(--green)}.h-n{background:#e9edf4;color:#9aa6bd}.h-p{background:var(--amber)}
+
+.prio{font-size:.66rem;font-weight:800;padding:3px 9px;border-radius:var(--r-pill);text-transform:uppercase;letter-spacing:.03em;white-space:nowrap}
+.prio-onc{background:var(--coral-soft);color:var(--coral-deep)}.prio-yuk{background:var(--blue-soft);color:var(--navy)}.prio-ort{background:var(--amber-soft);color:#7a4d05}.prio-tak{background:#e9edf4;color:#566}
+
+.chart-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);padding:17px 19px;box-shadow:var(--shadow)}
+.chart-card h4{margin:0 0 3px}.chart-card .sub{font-size:.77rem;color:var(--ink-3);margin-bottom:10px}
+.chart-box{position:relative;height:262px}.chart-box.sm{height:226px}.chart-box.lg{height:320px}
+
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0 16px;border-bottom:1px solid var(--line)}
+.tab{padding:9px 15px;font-size:.85rem;font-weight:700;color:var(--ink-2);background:none;border:none;border-bottom:2.5px solid transparent;cursor:pointer;margin-bottom:-1px;font-family:inherit}
+.tab.active{color:var(--navy);border-bottom-color:var(--yellow)}
+.tab-panel{display:none}.tab-panel.active{display:block;animation:fade .25s}
+@keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+.shot-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:14px;margin:16px 0}
+.shot{background:var(--surface-2);border:1px solid var(--line);border-radius:var(--r-md);overflow:hidden;cursor:zoom-in;transition:.18s;display:flex;flex-direction:column}
+.shot:hover{transform:translateY(-3px);box-shadow:var(--shadow-h);border-color:var(--blue)}
+.shot__img{background:linear-gradient(160deg,#0a2150,#1a4290);display:grid;place-items:center;aspect-ratio:9/14;overflow:hidden}
+.shot__img.wide{aspect-ratio:16/10}
+.shot__img img{width:100%;height:100%;object-fit:cover;object-position:top}
+.shot__cap{padding:10px 12px}.shot__cap b{font-size:.82rem;color:var(--navy-deep);display:block}.shot__cap span{font-size:.73rem;color:var(--ink-3)}
+.lightbox{position:fixed;inset:0;background:rgba(8,18,40,.93);z-index:200;display:none;align-items:center;justify-content:center;padding:24px;cursor:zoom-out}
+.lightbox.open{display:flex;animation:fade .2s}
+.lightbox img{max-width:94vw;max-height:82vh;border-radius:12px;box-shadow:var(--shadow-pop);object-fit:contain;cursor:default}
+.lightbox__cap{position:absolute;bottom:18px;left:0;right:0;text-align:center;color:#fff;font-size:.88rem;padding:0 20px}
+.lightbox__close{position:absolute;top:16px;right:24px;color:#fff;font-size:2rem;cursor:pointer;line-height:1}
+
+.clist{list-style:none;margin:10px 0}
+.clist li{padding:7px 0 7px 30px;position:relative;border-bottom:1px dashed var(--line);font-size:.92rem}
+.clist li:last-child{border-bottom:none}
+.clist li::before{content:"✓";position:absolute;left:0;top:7px;width:20px;height:20px;background:var(--green-soft);color:var(--green);border-radius:50%;display:grid;place-items:center;font-size:.7rem;font-weight:900}
+.clist.q li::before{content:"?";background:var(--blue-soft);color:var(--blue)}
+.clist.dot li::before{content:"•";background:var(--yellow-soft);color:var(--yellow-deep)}
+.clist.imp li::before{content:"!";background:var(--coral-soft);color:var(--coral-deep)}
+.nlist{counter-reset:n;list-style:none;margin:10px 0}
+.nlist li{counter-increment:n;padding:8px 0 8px 38px;position:relative;font-size:.92rem;border-bottom:1px dashed var(--line)}
+.nlist li:last-child{border-bottom:none}
+.nlist li::before{content:counter(n);position:absolute;left:0;top:8px;width:24px;height:24px;background:var(--navy);color:#fff;border-radius:8px;display:grid;place-items:center;font-size:.76rem;font-weight:800}
+
+/* post replica (Ekşi / X) */
+.posts{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0}
+.post{border:1px solid var(--line);border-radius:var(--r-md);overflow:hidden;background:var(--surface);box-shadow:var(--shadow)}
+.post__top{display:flex;align-items:center;gap:9px;padding:11px 14px;border-bottom:1px solid var(--line-soft)}
+.post__av{width:34px;height:34px;border-radius:50%;flex:none;background:linear-gradient(135deg,var(--navy),var(--cyan));display:grid;place-items:center;color:#fff;font-weight:800;font-size:.8rem}
+.post__id b{font-size:.85rem;color:var(--navy-deep);display:block;line-height:1.1}
+.post__id span{font-size:.74rem;color:var(--ink-3)}
+.post__src{margin-left:auto;font-size:.64rem;font-weight:800;text-transform:uppercase;letter-spacing:.04em;padding:3px 8px;border-radius:var(--r-pill)}
+.src-eksi{background:#d6f5e2;color:#137a45}.src-x{background:#e3e8f0;color:#1a2230}
+.post__body{padding:12px 14px;font-size:.89rem;color:var(--ink)}
+.post__meta{display:flex;gap:14px;padding:0 14px 11px;font-size:.74rem;color:var(--ink-3)}
+.post__note{display:flex;gap:8px;align-items:flex-start;padding:10px 14px;background:var(--coral-soft);font-size:.8rem;color:#7a2a1f;border-top:1px solid #f6cfc8}
+.post__note b{color:var(--coral-deep)}
+.post__note.pos{background:var(--green-soft);color:#145232;border-color:#aee3c3}.post__note.pos b{color:#137a45}
+.post__note.info{background:var(--blue-soft);color:#13307f;border-color:#c3d2ff}.post__note.info b{color:var(--navy)}
+
+/* hero mockup (annotated) */
+.mock{position:relative;border-radius:var(--r-md);overflow:hidden;border:1px solid var(--line);margin:14px 0;box-shadow:var(--shadow)}
+.mock__hero{background:linear-gradient(120deg,#0a2150,#1a4290 55%,#1d5aff);color:#fff;padding:26px 26px 22px;position:relative;min-height:230px}
+.mock__hero .eb{color:var(--yellow);font-weight:800;font-size:.82rem}
+.mock__hero h3{color:#fff;font-size:1.7rem;margin:6px 0 2px;max-width:60%}
+.mock__hero p{color:rgba(255,255,255,.85);font-size:.82rem;max-width:55%}
+.mock__cta{display:inline-block;margin-top:12px;background:var(--yellow);color:var(--navy-deep);font-weight:800;font-size:.82rem;padding:9px 22px;border-radius:var(--r-pill)}
+.mock__logos{display:flex;gap:6px;flex-wrap:wrap;margin-top:14px}
+.mock__logos span{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:8px;font-size:.6rem;font-weight:700;padding:5px 8px}
+.pin{position:absolute;width:24px;height:24px;border-radius:50%;background:var(--coral);color:#fff;font-weight:800;font-size:.78rem;display:grid;place-items:center;box-shadow:0 3px 10px rgba(226,80,63,.5);border:2px solid #fff}
+
+.term{border-bottom:1px dotted var(--blue);cursor:help;font-weight:600;color:var(--navy);position:relative}
+.term::after{content:attr(data-tip);position:absolute;left:50%;bottom:135%;transform:translateX(-50%) translateY(4px);background:var(--navy-deep);color:#fff;font-weight:500;font-size:.76rem;line-height:1.4;padding:8px 11px;border-radius:9px;width:max-content;max-width:260px;box-shadow:var(--shadow-pop);opacity:0;pointer-events:none;transition:.15s;z-index:90;white-space:normal;text-align:left}
+.term::before{content:"";position:absolute;left:50%;bottom:135%;transform:translateX(-50%);border:6px solid transparent;border-top-color:var(--navy-deep);opacity:0;transition:.15s;z-index:90}
+.term:hover::after,.term:hover::before{opacity:1;transform:translateX(-50%) translateY(0)}
+@media(hover:none){.term::after,.term::before{display:none}}
+
+footer{max-width:var(--maxw);margin:0 auto;padding:22px;color:var(--ink-3);font-size:.8rem;text-align:center}
+
+@media(max-width:900px){
+  .layout{grid-template-columns:1fr;padding:16px 13px 60px}
+  .sidenav{display:none}.kpi-grid{grid-template-columns:repeat(2,1fr)}
+  .grid-2,.grid-3,.posts{grid-template-columns:1fr}
+  .section{padding:20px 16px}.hero h1{font-size:1.5rem}
+  .mock__hero h3,.mock__hero p{max-width:100%}
+}
+@media print{.sidenav,.appbar__meta,.tablefilter{display:none}.section{break-inside:avoid;box-shadow:none}}
+</style>
+</head>
+<body>
+
+<header class="appbar">
+  <div class="appbar__in">
+    <div class="logo">
+      <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-label="Turkcell One">
+        <rect width="40" height="40" rx="11" fill="#1a4290"/>
+        <circle cx="20" cy="12.4" r="4.1" fill="#ffd400"/>
+        <path d="M11.5 30.5c0-5.4 3.8-9 8.5-9s8.5 3.6 8.5 9" fill="none" stroke="#ffd400" stroke-width="3.4" stroke-linecap="round"/>
+      </svg>
+      <span class="logo__txt"><b>Turkcell <span>One</span></b><small>Rakip Analizi &amp; SEO / GEO Değerlendirmesi</small></span>
+    </div>
+    <div class="appbar__meta">
+      <span class="chip">15 Haziran 2026</span>
+      <span class="chip">Hedef: /turkcellone/</span>
+      <span class="chip--solid">Inbound · SEO</span>
+    </div>
+  </div>
+</header>
+
+<div class="layout">
+  <nav class="sidenav" id="sidenav">
+    <h4>Bölümler</h4>
+    <a href="#ozet"><span class="n">01</span> Yönetici Özeti</a>
+    <a href="#yontem"><span class="n">02</span> Yöntem &amp; Kapsam</a>
+    <a href="#urun"><span class="n">03</span> Ürün &amp; Paket Yapısı</a>
+    <a href="#serp"><span class="n">04</span> SERP &amp; Görünürlük</a>
+    <a href="#geo"><span class="n">05</span> AI Overview &amp; GEO</a>
+    <a href="#talep"><span class="n">06</span> Talep Havuzu &amp; Content Gap</a>
+    <a href="#rakipicerik"><span class="n">07</span> Rakip İçerikte Neler Var</a>
+    <a href="#trends"><span class="n">08</span> Google Trends</a>
+    <a href="#sosyal"><span class="n">09</span> Sosyal Duygu (X &amp; Ekşi)</a>
+    <a href="#sorular"><span class="n">10</span> Kullanıcı Soruları</a>
+    <a href="#cro"><span class="n">11</span> CRO / CX / UI-UX</a>
+    <a href="#audit"><span class="n">12</span> Sayfa İçi &amp; CWV</a>
+    <a href="#aksiyon"><span class="n">13</span> Aksiyon &amp; İçerik Brief</a>
+    <a href="#firsat"><span class="n">14</span> Geliştirme Alanları</a>
+    <a href="#sozluk"><span class="n">15</span> Terim Sözlüğü</a>
+  </nav>
+
+  <main>
+
+  <!-- HERO -->
+  <section class="section hero" id="ozet">
+    <span class="eyebrow">Yönetici Özeti</span>
+    <h1>Marka aramasında güçlü başlangıç; en yüksek getiri AI görünürlüğü, içerik derinliği ve platform talep havuzunda</h1>
+    <p class="lead">Turkcell One, popüler dijital abonelikleri (Netflix, YouTube Premium, Amazon Prime, TV+ ile HBO Max, Wonjo Kids, Lifebox, fizy) tek faturada ve 12 ay sabit fiyat avantajıyla birleştiren bir bundle olarak Haziran 2026 başında kullanıma sunulmuştur. Mevcut durum, en yüksek getirili fırsat ve öne çıkan aksiyon üç başlıkta özetlenmektedir.</p>
+    <div class="hero__grid">
+      <div class="hero__pt"><span class="hero__pt-k">1 · Mevcut durum</span><b>Marka SERP'i kontrol altında</b><p class="hero__pt-b">"turkcell one" aramasında organik ilk iki sıra markadadır (One Plus paket sayfası ve hub). İlk sayfanın bir bölümü editöryel, kullanıcı ve sosyal içerikten oluşmaktadır.</p></div>
+      <div class="hero__pt"><span class="hero__pt-k">2 · En büyük fırsat</span><b>Platform talep havuzu</b><p class="hero__pt-b">Paketin içerdiği platformlar yüksek arama talebi taşımaktadır (Netflix ~2,74 mn, HBO Max ~368 bin aylık, DataForSEO). Bu talebi sayfaya bağlayacak içerik öne çıkmaktadır.</p></div>
+      <div class="hero__pt"><span class="hero__pt-k">3 · Öne çıkan aksiyon</span><b>Yapılandırılmış içerik</b><p class="hero__pt-b">Karşılaştırma tablosu, değer bloğu ve <span class="term" data-term="AI Overview">AI Overview</span> atfını markaya yaklaştıran içerik değerlendirilebilir.</p></div>
+    </div>
+    <div class="hero__tags">
+      <span class="chip">Rakip seti: Vodafone · Türk Telekom + SERP / AI keşfi</span>
+      <span class="chip">Kaynak: DataForSEO · Ahrefs · Canlı SERP / AI Overview · Google Trends · X · Ekşi · DonanımHaber · Webtekno</span>
+      <span class="chip">Çıktı: HTML rapor + aksiyon dokümanı</span>
+    </div>
+  </section>
+
+  <!-- KPI -->
+  <section class="section">
+    <span class="eyebrow">Gösterge Paneli</span>
+    <h2>Anlık görünüm</h2>
+    <p class="muted" style="margin-bottom:16px">15 Haziran 2026 itibarıyla derlenen göstergeler. Hacim değerleri aylık aramadır; günlük yaklaşık değer aylık değerin yaklaşık 1/30'u olarak hesaplanabilir.</p>
+    <div class="kpi-grid">
+      <div class="kpi kpi--feat"><div class="lab">"turkcell one" organik</div><div class="val">#1 &amp; #2</div><div class="sub">Liste + hub sıralaması</div></div>
+      <div class="kpi"><div class="lab">Platform talep havuzu (aylık, paket içi 4 platform)</div><div class="val">~3,7 mn</div><div class="sub up">▲ content gap fırsatı</div></div>
+      <div class="kpi"><div class="lab">"amazon prime üyelik" hacim / <span class="term" data-term="KD">KD</span></div><div class="val">~60.500 / 6</div><div class="sub up">▲ düşük zorluk</div></div>
+      <div class="kpi"><div class="lab">"turkcell one nedir" AI Overview</div><div class="val">Aktif</div><div class="sub watch">Atıf paylaşımlı</div></div>
+      <div class="kpi"><div class="lab">Paket sayısı (2 aile)</div><div class="val">6</div><div class="sub neu">Hub'da 3'ü öne çıkıyor</div></div>
+      <div class="kpi"><div class="lab">Bireysel topla göre tasarruf</div><div class="val">~%40</div><div class="sub up">Değer anlatısı güçlü</div></div>
+      <div class="kpi"><div class="lab">Google Trends zirvesi</div><div class="val">~9 Haz</div><div class="sub up">▲ → 100</div></div>
+      <div class="kpi"><div class="lab">Hub sayfa içi (DataForSEO ölçümü)</div><div class="val"><span class="term" data-term="TTI">TTI</span> ~3,2 sn</div><div class="sub watch"><span class="term" data-term="DOM">DOM</span> ~8,1 sn · 59 görsel · alt metinsiz</div></div>
+    </div>
+    <div class="grid-2" style="margin-top:18px">
+      <div class="chart-card"><h4>"turkcell one" ilk sayfa görünürlük dağılımı</h4><div class="sub">Canlı gözlem · 15 Haz 2026 · masaüstü</div><div class="chart-box sm"><canvas id="chSerp"></canvas></div></div>
+      <div class="chart-card"><h4>AI yanıtlarında gözlemlenen kaynak dağılımı</h4><div class="sub">"turkcell one (nedir)" üretken cevaplar</div><div class="chart-box sm"><canvas id="chAi"></canvas></div></div>
+    </div>
+  </section>
+
+  <!-- ANA BULGULAR -->
+  <section class="section">
+    <span class="eyebrow">Ana Bulgular</span>
+    <h2>Yedi başlıkta öne çıkanlar</h2>
+    <div class="insight"><b>Marka <span class="term" data-term="SERP">SERP</span>'i markanın kontrolünde.</b> "turkcell one" aramasında organik ilk iki sıra markadadır (One Plus paket detayı ve hub). İlk sayfanın bir bölümü editöryel, kullanıcı içeriği ve sosyal sonuçlardan oluşmaktadır.</div>
+    <div class="insight"><b>Asıl fırsat platform talep havuzunda.</b> Paketin içerdiği platformlar yüksek arama talebi taşımaktadır (netflix ~2,74 mn, amazon prime ~450 bin, hbo max ~368 bin, youtube premium ~165 bin aylık; DataForSEO, TR). Bu talebi marka sayfasına bağlayacak içeriğin sınırlı olduğu gözlemlenmektedir.</div>
+    <div class="insight"><b>Düşük zorlukta content gap kelimeleri mevcut.</b> "amazon prime üyelik" (~60,5 bin / <span class="term" data-term="KD">KD</span> 6), "netflix fiyat" (~49,5 bin / KD 11), "hbo max fiyat" (~5,4 bin / KD 3) gibi yüksek hacimli ve düşük zorlukta terimler değerlendirilebilir niteliktedir (DataForSEO Labs KD).</div>
+    <div class="insight"><b>AI görünürlüğü paylaşımlı, tanım atfı üçüncü tarafta.</b> "turkcell one nedir" için <span class="term" data-term="AI Overview">AI Overview</span>; tanım ve paket dökümünde Webtekno, Instagram ve DonanımHaber'i birincil kaynak göstermekte, markaya atıf çoğunlukla "sayfayı ziyaret et / abone ol" adımında verilmektedir. Atfın tanımsal kısımda markaya yaklaştırılması fırsat alanıdır.</div>
+    <div class="insight"><b>Paket yapısı 6 pakete dayanıyor.</b> İki aile gözlemlenmektedir: TV+ ile HBO Max içermeyen (Mega, Maksi, Ultra) ve içeren (Star, Plus, Premium). Hub sayfasında ağırlıklı olarak üç paketin öne çıktığı görülmektedir.</div>
+    <div class="insight"><b>Karşılaştırma derinliği geliştirilebilir.</b> Editöryel sayfalar paket / platform / fiyat tablosu ve geçiş senaryolarıyla öne çıkarken, marka sayfasında makine okunur karşılaştırma tablosu ve değer bloğu öne çıkarılabilir niteliktedir.</div>
+    <div class="insight"><b>Sayfa içi temel sağlam, hız ve görsel teslimi öncelikli.</b> <span class="term" data-term="Schema">Schema</span> tarafında WebPage, Product ve <span class="term" data-term="FAQPage Schema">FAQPage</span> mevcuttur; DataForSEO ölçümünde başlık (57 krk), açıklama (105 krk) ve H1 uyumlu, H2 sayısı 27. Görsellerde alt metin eksikliği, render engelleyen kaynak, etkileşime hazır olma süresi (~3,2 sn), hub içi iç bağlantının azlığı (7) ve <span class="term" data-term="LCP">LCP</span> önceliklendirmesi en yüksek getirili teknik alanlar olarak öne çıkmaktadır.</div>
+  </section>
+
+  <!-- YONTEM -->
+  <section class="section" id="yontem">
+    <span class="eyebrow">Yöntem</span>
+    <h2>Yöntem &amp; Kapsam</h2>
+    <p>Değerlendirme, hedef sayfa <a href="https://www.turkcell.com.tr/turkcellone/" target="_blank" rel="noopener">turkcell.com.tr/turkcellone/</a> (hub) ve sıralama önceliği yüksek <a href="https://www.turkcell.com.tr/paket-ve-tarifeler/turkcell-one" target="_blank" rel="noopener">/paket-ve-tarifeler/turkcell-one</a> (liste) için yürütülmüştür.</p>
+    <div class="grid-3">
+      <div class="card"><span class="tag t-tc">Birincil</span><h4>Canlı SERP &amp; AI</h4><p class="small">Google TR canlı gözlem: organik sıralama, <span class="term" data-term="AI Overview">AI Overview</span> / AI Mode, kullanıcı soruları, reklam.</p></div>
+      <div class="card"><span class="tag t-op">Birincil</span><h4>DataForSEO + Ahrefs</h4><p class="small">DataForSEO (TR): Google Ads hacim, Labs <span class="term" data-term="KD">KD</span> / niyet, canlı <span class="term" data-term="SERP">SERP</span> + AI Overview, Google Trends, sayfa içi ölçüm. Ahrefs ile çapraz doğrulama.</p></div>
+      <div class="card"><span class="tag t-ugc">Destek</span><h4>Trends · X · Ekşi · Editöryel</h4><p class="small">Google Trends, X (Twitter), Ekşi Sözlük, DonanımHaber, Webtekno ve müşteri SEO dokümanı.</p></div>
+    </div>
+    <div class="callout callout--info"><b>Veri ve şeffaflık notu.</b> Hacim, <span class="term" data-term="KD">KD</span>, SERP, AI Overview, Google Trends ve sayfa içi ölçüm verileri DataForSEO (Türkiye) ile çekilmiş ve Ahrefs ile çapraz doğrulanmıştır (15 Haziran 2026). İki kaynak arasında hacim ve KD farkları olabilir; tabloda DataForSEO güncel değerleri esas alınmış, Ahrefs değerleri çapraz okuma için saklanmıştır. Marka bundle terimlerinin talebi yeni oluştuğundan araç veritabanlarında düşük görünmekte (ör. "turkcell one" aylık aramalar Nisan 50, Mayıs 260 ile yükselmekte); bu nedenle analiz, paketin içerdiği platformların talep havuzu üzerinden derinleştirilmiştir. Rakip fiyat ve paket bilgileri 15 Haziran 2026 anlık gözlemidir. Hacimler aylık aramadır; günlük yaklaşık değer aylık değerin yaklaşık 1/30'udur.</div>
+  </section>
+
+  <!-- URUN -->
+  <section class="section" id="urun">
+    <span class="eyebrow">Ürün</span>
+    <h2>Ürün &amp; Paket Yapısı</h2>
+    <p>Turkcell One, bağımsız bir dijital abonelik bundle'ı olarak konumlanmaktadır: tek tek platformlara abone olmak yerine hepsi tek faturada, 12 ay sabit fiyat avantajıyla. Bireysel faturalı mobil ses hattı müşterilerine açık olduğu, ödemenin "Faturana Yansıt" ile yapıldığı gözlemlenmektedir.</p>
+    <div class="callout callout--info"><b>Öne çıkan gözlem.</b> Üçüncü taraf kaynaklarda (<a href="https://www.donanimhaber.com/turkcell-one-tek-abonelikle-netflix-youtube-hbo-max-bir-arada--206627" target="_blank" rel="noopener">DonanımHaber</a>) altı paketin iki aile halinde sunulduğu görülmektedir. Hub sayfasında ağırlıklı olarak TV+ ile HBO Max içeren üç paket öne çıkmaktadır; diğer üç paketin ve paket başına Netflix kademesinin daha görünür kılınması fırsat sunabilir.</div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Paket</th><th>Aylık (taahhütlü)</th><th>TV+ / HBO Max</th><th>Netflix kademesi</th><th>Aile</th></tr></thead>
+        <tbody>
+          <tr><td><b>One Mega</b></td><td>~330 TL</td><td><span class="pill p-gray">Yok</span></td><td>Temel</td><td>HBO Max'siz</td></tr>
+          <tr><td><b>One Maksi</b></td><td>~430 TL</td><td><span class="pill p-gray">Yok</span></td><td>Standart</td><td>HBO Max'siz</td></tr>
+          <tr><td><b>One Ultra</b></td><td>~500 TL</td><td><span class="pill p-gray">Yok</span></td><td>Premium</td><td>HBO Max'siz</td></tr>
+          <tr><td><b>One Star</b></td><td>~500 TL</td><td><span class="pill p-pos">Var</span></td><td>Temel</td><td>HBO Max'li</td></tr>
+          <tr><td><b>One Plus</b></td><td>~600 TL</td><td><span class="pill p-pos">Var</span></td><td>Standart</td><td>HBO Max'li</td></tr>
+          <tr><td><b>One Premium</b></td><td>~690 TL</td><td><span class="pill p-pos">Var</span></td><td>Premium</td><td>HBO Max'li</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="small">Kaynak: DonanımHaber paket dökümü + canlı sayfa gözlemi (15 Haz 2026). Taahhütsüz fiyatların daha yüksek olduğu (ör. Plus için ~850 TL) gözlemlenmektedir.</p>
+  </section>
+
+  <!-- SERP -->
+  <section class="section" id="serp">
+    <span class="eyebrow">SERP</span>
+    <h2>SERP &amp; Marka Görünürlüğü</h2>
+    <p>"turkcell one" canlı <span class="term" data-term="SERP">SERP</span>'inde (DataForSEO, masaüstü, 15 Haz 2026) marka güçlü konumdadır; ilk sayfanın bir bölümü editöryel, kullanıcı içeriği (UGC) ve sosyal sonuçlardan oluşmaktadır. Bu sorguda organik #1 One Plus paket detay sayfası, #2 hub'dır. "turkcell one nedir" sorgusunda ise liste sayfası (One Plus / Ultra / Star sitelink'leriyle) #1 olarak görünmektedir.</p>
+    <div class="table-wrap">
+      <table id="serpTable">
+        <thead><tr><th data-sort="num">Sıra<span class="arr">↕</span></th><th>Sonuç</th><th data-sort="text">Sahip<span class="arr">↕</span></th><th data-sort="text">Tip<span class="arr">↕</span></th><th>Bağlantı</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>Turkcell One Plus (paket detay · ₺600)</td><td>Turkcell</td><td><span class="pill p-pos">Organik</span></td><td><a href="https://www.turkcell.com.tr/paket-ve-tarifeler/turkcell-one/turkcell-one-plus" target="_blank" rel="noopener">One Plus</a></td></tr>
+          <tr><td>2</td><td>Turkcell One ile üyeliklerini tek yerden yönet</td><td>Turkcell</td><td><span class="pill p-pos">Organik</span></td><td><a href="https://www.turkcell.com.tr/turkcellone/" target="_blank" rel="noopener">Hub</a></td></tr>
+          <tr><td>3</td><td>Kullanıcı soruları (PAA) bloğu</td><td>Google</td><td><span class="pill p-info">PAA</span></td><td>·</td></tr>
+          <tr><td>4</td><td>turkcell one (kullanıcı yorumları)</td><td>Ekşi Sözlük</td><td><span class="pill p-amber">UGC</span></td><td><a href="https://eksisozluk.com/turkcell-one--8107934" target="_blank" rel="noopener">Ekşi</a></td></tr>
+          <tr><td>5</td><td>Tek abonelikle Netflix, YouTube, HBO Max…</td><td>DonanımHaber</td><td><span class="pill p-amber">Editöryel</span></td><td><a href="https://www.donanimhaber.com/turkcell-one-tek-abonelikle-netflix-youtube-hbo-max-bir-arada--206627" target="_blank" rel="noopener">Makale</a></td></tr>
+          <tr><td>6</td><td>Faturalı Tarifeler (One Maksi · 430 TL)</td><td>Turkcell</td><td><span class="pill p-pos">Organik</span></td><td><a href="https://www.turkcell.com.tr/paket-ve-tarifeler/faturali-hat" target="_blank" rel="noopener">Liste</a></td></tr>
+          <tr><td>7</td><td>Turkcell One Şikayetleri (1,5/5 · 13.210 oy)</td><td>Şikayetvar</td><td><span class="pill p-amber">UGC</span></td><td><a href="https://www.sikayetvar.com/turkcell/one" target="_blank" rel="noopener">Şikayetvar</a></td></tr>
+          <tr><td>8</td><td>Turkcell One Nedir? Paketleri ve Fiyatları</td><td>Webtekno</td><td><span class="pill p-amber">Editöryel</span></td><td><a href="https://www.webtekno.com/turkcell-netflix-hbo-max-prime-video-youtube-premium-ortak-abonelik-paketi-duyurdu-h218160.html" target="_blank" rel="noopener">Makale</a></td></tr>
+          <tr><td>10</td><td>Turkcell Pasaj · "Turkcell One Paketlerini Keşfet"</td><td>Turkcell</td><td><span class="pill p-pos">Organik</span></td><td><a href="https://www.turkcell.com.tr/pasaj" target="_blank" rel="noopener">Pasaj</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="small">Not: Bu ölçümde üst reklam (paid) öğesi dönmemiştir; reklam alanı gün ve saat bazında değişebilmektedir. Instagram (technowavetr) lansman gönderisi "turkcell one nedir" sorgusunda ilk sayfada yer almaktadır.</p>
+    <div class="grid-2">
+      <div>
+        <h4>Kullanıcı soruları (PAA)</h4>
+        <ul class="clist q"><li>Turkcell One nedir / ne demek?</li><li>Turkcell'in en ucuz paketi hangisi?</li><li>Turkcell'de 1 yıllık paket ne kadar?</li><li>Turkcell 20 GB 1000 dk 1000 SMS paketi nedir?</li><li>Turkcell taahhüt yenilenmezse ne olur?</li></ul>
+      </div>
+      <div>
+        <h4>Kanıt: canlı SERP (mobil)</h4>
+        <div class="shot-grid" style="margin-top:6px">
+          <figure class="shot" data-full="assets/screenshots/serp-aio-turkcell-one-mobile.png" data-cap="Mobil: 'turkcell one' AI Bakışı (marka atıflı)"><div class="shot__img"><img src="assets/screenshots/serp-aio-turkcell-one-mobile.png" alt="Mobil AI Bakışı"></div><figcaption class="shot__cap"><b>AI Bakışı</b><span>Google TR mobil</span></figcaption></figure>
+          <figure class="shot" data-full="assets/screenshots/serp-paa-mobile.png" data-cap="Mobil: kullanıcı soruları + DonanımHaber sonucu"><div class="shot__img"><img src="assets/screenshots/serp-paa-mobile.png" alt="Mobil PAA"></div><figcaption class="shot__cap"><b>Sorular + editöryel</b><span>Ekşi · PAA · DonanımHaber</span></figcaption></figure>
+        </div>
+      </div>
+    </div>
+    <div class="callout callout--info"><b>Sayfa rol haritası ve kanibalizasyon.</b> "turkcell one" sorgusunda One Plus detay (#1) ile hub (#2), "turkcell one nedir" sorgusunda ise liste (#1) aynı anda sıralanmaktadır. Sayfalar marka sahipli olduğundan rakibe kayıp riski düşüktür; ancak sinyallerin dağılmaması için rol ayrımı netleştirilebilir: hub = marka / tanım / "nedir", liste = paket karşılaştırma ve karar, detay = işlemsel / satın alma. "turkcell one" ana sorgusunda hangi sayfanın öne çıkacağı, iç bağlantı çapa metinleri ve <span class="term" data-term="Canonical">canonical</span> ile sinyal konsolidasyonu bir kural setiyle değerlendirilebilir.</div>
+  </section>
+
+  <!-- GEO -->
+  <section class="section" id="geo">
+    <span class="eyebrow">AI &amp; GEO</span>
+    <h2>AI Overview &amp; Generative Engine Optimization</h2>
+    <p>"turkcell one nedir" sorgusunda Google'ın <span class="term" data-term="AI Overview">AI Overview</span> yanıtı (DataForSEO, 15 Haz 2026) tanım ve paket dökümünde Webtekno, Instagram ve DonanımHaber'i birincil kaynak göstermekte; markaya atıf çoğunlukla "sayfayı ziyaret et / abone ol" adımında verilmektedir. Marka görünür olmakla birlikte tanımsal bilgi otoritesini büyük ölçüde üçüncü taraf yayıncılarla paylaşmaktadır.</p>
+    <div class="callout callout--info"><b>AI Overview'in marka tanımı (alıntı).</b> "Turkcell One, Netflix, HBO Max, Amazon Prime ve YouTube Premium gibi popüler dijital içerik ve yayın platformlarını tek faturada birleştiren ortak bir abonelik paketidir. Tek tek üye olma derdini ortadan kaldırır ve 12 ay boyunca sabit fiyat avantajı sunar." <span class="small">Kaynak atfı: Webtekno · Instagram · DonanımHaber. Paket dökümü (Star 500 / Plus 600 / Premium 690) atfı: Webtekno. "Sayfayı ziyaret et" atfı: Turkcell + Webtekno.</span></div>
+    <div class="grid-3">
+      <figure class="shot" data-full="assets/screenshots/ai-mode-webtekno-packages.png" data-cap="Google AI Mode: paket dökümü Webtekno atıflı (Star 500 / Plus 600)"><div class="shot__img"><img src="assets/screenshots/ai-mode-webtekno-packages.png" alt="AI Mode Webtekno"></div><figcaption class="shot__cap"><b>AI Mode: paket dökümü</b><span>Atıf: Webtekno</span></figcaption></figure>
+      <figure class="shot" data-full="assets/screenshots/ai-mode-sources.png" data-cap="AI Mode kaynak kartları: marka + Webtekno"><div class="shot__img"><img src="assets/screenshots/ai-mode-sources.png" alt="AI Mode kaynaklar"></div><figcaption class="shot__cap"><b>AI Mode: kaynaklar</b><span>Marka + Webtekno</span></figcaption></figure>
+      <figure class="shot" data-full="assets/screenshots/ai-mode-subscribe-steps.png" data-cap="AI Mode: 'Nasıl abone olunur' adımları (marka + fizy)"><div class="shot__img"><img src="assets/screenshots/ai-mode-subscribe-steps.png" alt="AI Mode adımlar"></div><figcaption class="shot__cap"><b>AI Mode: abonelik adımları</b><span>Marka + fizy</span></figcaption></figure>
+    </div>
+    <h3>GEO yol haritası: atfı markaya yaklaştırmak</h3>
+    <div class="grid-2">
+      <ul class="nlist"><li><b>Alıntılanabilir tanım:</b> "Turkcell One nedir?" yanıtının sayfanın üstünde net ve tek paragraf biçiminde konumlandırılması değerlendirilebilir.</li><li><b>Eksiksiz <span class="term" data-term="FAQPage Schema">FAQPage</span>:</b> tüm soru ve cevapların işaretlenmesi, üretken motorların yapılandırılmış içeriği tercih etmesi açısından fayda sağlayabilir.</li><li><b>Karşılaştırma tablosu:</b> "hangi pakette ne var" bilgisinin makine okunur tabloyla sunulması değerlendirilebilir (Webtekno bu yapıyla atıf almaktadır).</li></ul>
+      <ul class="nlist"><li><b>Değer bloğu:</b> bireysel toplam ile paket fiyatının karşılaştırıldığı net bir özet eklenmesi fayda sağlayabilir.</li><li><b>Alıntılanabilir pasaj yapısı:</b> her başlığın hemen altına 40-60 kelimelik, tek başına anlamlı yanıt pasajları yerleştirilmesi üretken motorların pasaj alıntısını kolaylaştırabilir.</li><li><b>AI tarayıcı erişimi:</b> robots.txt içinde GPTBot, Google-Extended ve PerplexityBot erişiminin gözden geçirilmesi (gerekirse llms.txt) üretken motor görünürlüğü açısından değerlendirilebilir.</li><li><b>Yayıncı atfı:</b> atıf alan Webtekno ve DonanımHaber gibi kaynaklara resmi basın / veri sayfası ile güncel bilgi sağlanması, markanın eş-kaynak konumunu güçlendirebilir.</li><li><b>Tazelik ve otorite:</b> dateModified güncelliği, resmi açıklama ve güven bloklarının güçlendirilmesi markanın tercih edilen kaynak olmasına katkı sağlayabilir.</li></ul>
+    </div>
+  </section>
+
+  <!-- TALEP HAVUZU -->
+  <section class="section" id="talep">
+    <span class="eyebrow">Talep Havuzu</span>
+    <h2>Talep Havuzu &amp; <span class="term" data-term="Content Gap">Content Gap</span></h2>
+    <p>Marka bundle terimleri yeni olduğundan ölçüm araçlarında düşük görünmektedir. Buna karşılık paketin içerdiği platformların arama talebi oldukça yüksektir. Aşağıdaki tablo, bu talep havuzunu ve markanın halihazırda büyük ölçüde değerlendirmediği <span class="term" data-term="Content Gap">content gap</span> alanlarını göstermektedir. Hacimler aylık aramadır; günlük yaklaşık değer aylık değerin yaklaşık 1/30'u olarak verilmiştir.</p>
+    <div class="grid-2">
+      <div class="chart-card"><h4>Platform talep havuzu (aylık arama hacmi)</h4><div class="sub">Türkiye · DataForSEO · logaritmik ölçek</div><div class="chart-box lg"><canvas id="chDemand"></canvas></div></div>
+      <div class="chart-card"><h4>Düşük zorlukta content gap kelimeleri</h4><div class="sub">Yüksek hacim + düşük <span class="term" data-term="KD">KD</span> (renk: KD)</div><div class="chart-box lg"><canvas id="chGap"></canvas></div></div>
+    </div>
+    <div class="tablefilter"><input id="poolFilter" placeholder="Tabloda ara… (ör. youtube)"><span class="chip">Kaynak: DataForSEO (Google Ads hacim + Labs KD) · Ahrefs çapraz · TR · 15 Haz 2026</span></div>
+    <div class="table-wrap">
+      <table id="poolTable">
+        <thead><tr>
+          <th data-sort="text">Kelime<span class="arr">↕</span></th>
+          <th data-sort="num">Aylık hacim<span class="arr">↕</span></th>
+          <th data-sort="num">Günlük ~<span class="arr">↕</span></th>
+          <th data-sort="num"><span class="term" data-term="KD">KD</span><span class="arr">↕</span></th>
+          <th data-sort="text">Turkcell One ilgisi</th>
+          <th>Fırsat</th>
+        </tr></thead>
+        <tbody>
+          <tr><td>netflix</td><td>2.740.000</td><td>~91.300</td><td>75</td><td><span class="pill p-amber">Dolaylı</span></td><td>Bilgi köprüsü</td></tr>
+          <tr><td>amazon prime</td><td>450.000</td><td>~15.000</td><td>36</td><td><span class="pill p-amber">Dolaylı</span></td><td>Bilgi köprüsü</td></tr>
+          <tr><td>hbo max</td><td>368.000</td><td>~12.270</td><td>22</td><td><span class="pill p-pos">Var</span></td><td><span class="prio prio-yuk">Yüksek</span></td></tr>
+          <tr><td>disney plus</td><td>301.000</td><td>~10.030</td><td>48</td><td><span class="pill p-neg">Yok</span></td><td>Kapsam dışı (talep notu)</td></tr>
+          <tr><td>youtube premium</td><td>165.000</td><td>~5.500</td><td>24</td><td><span class="pill p-pos">Var</span></td><td><span class="prio prio-yuk">Yüksek</span></td></tr>
+          <tr><td>amazon prime üyelik</td><td>60.500</td><td>~2.020</td><td>6</td><td><span class="pill p-pos">Var</span></td><td><span class="prio prio-onc">Öncelikli</span></td></tr>
+          <tr><td>netflix fiyat</td><td>49.500</td><td>~1.650</td><td>11</td><td><span class="pill p-pos">Var</span></td><td><span class="prio prio-yuk">Yüksek</span></td></tr>
+          <tr><td>youtube premium fiyat</td><td>27.100</td><td>~903</td><td>18</td><td><span class="pill p-pos">Var</span></td><td><span class="prio prio-yuk">Yüksek</span></td></tr>
+          <tr><td>netflix paketleri</td><td>6.600</td><td>~220</td><td>15</td><td><span class="pill p-pos">Var</span></td><td><span class="prio prio-yuk">Yüksek</span></td></tr>
+          <tr><td>hbo max fiyat</td><td>5.400</td><td>~180</td><td>3</td><td><span class="pill p-pos">Var</span></td><td><span class="prio prio-onc">Öncelikli</span></td></tr>
+          <tr><td>youtube premium türkiye</td><td>2.900</td><td>~97</td><td>26</td><td><span class="pill p-pos">Var</span></td><td><span class="prio prio-ort">Orta</span></td></tr>
+          <tr><td>tv+ izle</td><td>2.900</td><td>~97</td><td>n/a</td><td><span class="pill p-pos">Var</span></td><td><span class="prio prio-ort">Orta</span></td></tr>
+          <tr><td>netflix abonelik</td><td>2.400</td><td>~80</td><td>14</td><td><span class="pill p-pos">Var</span></td><td><span class="prio prio-ort">Orta</span></td></tr>
+          <tr><td>spotify premium fiyat</td><td>1.600</td><td>~53</td><td>5</td><td><span class="pill p-neg">Yok</span></td><td>Kapsam dışı (talep notu)</td></tr>
+          <tr><td>netflix turkcell</td><td>70</td><td>~2</td><td>n/a</td><td><span class="pill p-pos">Var</span></td><td>Marka köprü</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout callout--info"><b>Content gap okuması.</b> "fiyat / üyelik / paket" varyantları yüksek hacim ve büyük ölçüde düşük <span class="term" data-term="KD">KD</span> taşımaktadır. İki kaynakta da düşük KD ile teyitlenen en sağlam adaylar: amazon prime üyelik (DataForSEO KD 6 / Ahrefs 3), youtube premium fiyat (KD 18 / Ahrefs 1) ve spotify premium fiyat (kapsam dışı; KD 5 / Ahrefs 1). "netflix fiyat" ve "netflix paketleri" DataForSEO'da düşük (KD 11 ve 15) görünmekle birlikte Ahrefs'te belirgin yüksektir (KD 44 ve 53); bu kelimeler için <span class="term" data-term="SERP">SERP</span> düzeyinde zorluk teyidi önerilir. Ayrıca netflix, hbo max ve youtube premium gibi platform adları navigasyonel niyet taşıdığından doğrudan sıralama hedefi değil, talep bağlamı olarak değerlendirilebilir; gerçek sıralama hedefi ticari "fiyat / üyelik / paket" varyantlarıdır. Bu kelimeler, marka sayfasından platform içeriklerine ve karşılaştırmaya köprü kuran <span class="term" data-term="Long-tail">long-tail</span> içerikle değerlendirilebilir. Disney+ (~301 bin) ve Spotify gibi paket kapsamında bulunmayan platformlar ise talebi gösteren ancak kapsam dışı kalan başlıklar olarak FAQ ve konumlandırma planında dikkate alınabilir.</div>
+  </section>
+
+  <!-- RAKIP ICERIK -->
+  <section class="section" id="rakipicerik">
+    <span class="eyebrow">Rakip İçerik</span>
+    <h2>Rakip İçerikte Neler Var</h2>
+    <p>İlk sayfadaki editöryel sayfaların içeriği incelenerek, marka sayfasında öne çıkarılabilecek alanlar çıkarılmıştır. Aşağıda her bir kaynağın gerçek içerik yapısı ve markanın değerlendirebileceği noktalar yer almaktadır.</p>
+    <div class="tabs" id="riTabs">
+      <button class="tab active" data-tab="ri1">Webtekno</button>
+      <button class="tab" data-tab="ri2">DonanımHaber</button>
+      <button class="tab" data-tab="ri3">Karşılaştırma matrisi</button>
+    </div>
+    <div class="tab-panel active" data-panel="ri1">
+      <div class="grid-2">
+        <div>
+          <span class="tag t-ed">Webtekno · AI atıflı</span>
+          <h4>Net tanım + tablo + adımlar</h4>
+          <p class="small">Sayfada "Turkcell One nedir?", Paket / Platform / Fiyat tablosu ve dört adımlı "nasıl abone olunur" akışı bulunmaktadır. Bu yapı, AI yanıtlarının tercih ettiği biçimle örtüşmektedir.</p>
+          <div class="card" style="background:#fff;border-style:dashed">
+            <div class="small" style="margin-bottom:6px"><b>Gerçek içerik (Webtekno tablosu)</b></div>
+            <table style="min-width:0;font-size:.8rem"><thead><tr><th>Paket</th><th>Netflix</th><th>Fiyat</th></tr></thead><tbody>
+              <tr><td>One Star</td><td>Temel</td><td>500 TL/ay</td></tr>
+              <tr><td>One Plus</td><td>Standart</td><td>600 TL/ay</td></tr>
+              <tr><td>One Premium</td><td>Premium</td><td>690 TL/ay</td></tr>
+            </tbody></table>
+          </div>
+          <p class="small"><a href="https://www.webtekno.com/turkcell-netflix-hbo-max-prime-video-youtube-premium-ortak-abonelik-paketi-duyurdu-h218160.html" target="_blank" rel="noopener">Kaynak: Webtekno →</a></p>
+          <figure class="shot" data-full="assets/screenshots/webtekno-desktop.png" data-cap="Webtekno makalesi (canlı): 'nedir' tanımı + paket / fiyat tablosu - AI Overview'in birincil kaynağı"><div class="shot__img wide"><img src="assets/screenshots/webtekno-desktop.png" alt="Webtekno makalesi canlı"></div><figcaption class="shot__cap"><b>Webtekno (canlı)</b><span>AI Overview birincil kaynağı</span></figcaption></figure>
+        </div>
+        <div>
+          <h4>Markanın değerlendirebileceği noktalar</h4>
+          <ul class="clist imp">
+            <li>Benzer makine okunur karşılaştırma tablosu hub sayfasında öne çıkarılabilir.</li>
+            <li>Dört adımlı abonelik akışı sayfada görselleştirilebilir.</li>
+            <li>"nedir" tanımı alıntılanabilir tek paragraf biçiminde konumlandırılabilir.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="tab-panel" data-panel="ri2">
+      <div class="grid-2">
+        <div>
+          <span class="tag t-ed">DonanımHaber · konu lideri</span>
+          <h4>Altı paket + geçiş senaryoları</h4>
+          <p class="small">Altı paket tam dökümle, platform listesiyle ve mevcut üyelik geçiş senaryolarıyla sunulmaktadır. Bu senaryolar kullanıcı sorularıyla birebir örtüşmektedir.</p>
+          <div class="card" style="background:#fff;border-style:dashed">
+            <div class="small"><b>Gerçek içerik (geçiş senaryoları)</b></div>
+            <ul class="clist dot" style="font-size:.82rem">
+              <li>Netflix: mevcut hesap Turkcell One'a taşınabiliyor</li>
+              <li>Amazon Prime / YouTube / Wonjo: önce iptal, sonra yeniden etkinleştirme</li>
+              <li>HBO Max: TV+ uygulaması üzerinden kullanım</li>
+              <li>Ödeme: faturaya yansıt, kredi kartı gerekmiyor</li>
+            </ul>
+          </div>
+          <p class="small"><a href="https://www.donanimhaber.com/turkcell-one-tek-abonelikle-netflix-youtube-hbo-max-bir-arada--206627" target="_blank" rel="noopener">Kaynak: DonanımHaber →</a></p>
+          <figure class="shot" data-full="assets/screenshots/donanimhaber-desktop.png" data-cap="DonanımHaber (canlı): altı paketin tam dökümü - Mega 330 / Maksi 430 / Ultra 500 / Star 500 / Plus 600 / Premium 690"><div class="shot__img wide"><img src="assets/screenshots/donanimhaber-desktop.png" alt="DonanımHaber 6 paket canlı"></div><figcaption class="shot__cap"><b>DonanımHaber (canlı)</b><span>6 paket tam döküm</span></figcaption></figure>
+        </div>
+        <div>
+          <h4>Markanın değerlendirebileceği noktalar</h4>
+          <ul class="clist imp">
+            <li>Altı paketin tamamı ve paket başına Netflix kademesi hub'da görünür kılınabilir.</li>
+            <li>Geçiş senaryoları yapılandırılmış bir blok veya <span class="term" data-term="FAQPage Schema">FAQ</span> olarak eklenebilir.</li>
+            <li>HBO Max'ın TV+ içinde kullanımı net biçimde açıklanabilir.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="tab-panel" data-panel="ri3">
+      <div class="table-wrap"><table class="heat">
+        <thead><tr><th>İçerik öğesi</th><th>Marka sayfası</th><th>Webtekno</th><th>DonanımHaber</th><th>Not</th></tr></thead>
+        <tbody>
+          <tr><td>Net "nedir" tanımı (alıntılanabilir)</td><td class="h h-p">Kısmi</td><td class="h h-y">Var</td><td class="h h-y">Var</td><td>Tek paragraf tanım</td></tr>
+          <tr><td>Makine okunur karşılaştırma tablosu</td><td class="h h-n">Henüz yok</td><td class="h h-y">Var</td><td class="h h-p">Liste</td><td>Paket / Platform / Fiyat</td></tr>
+          <tr><td>Paket başına Netflix kademesi</td><td class="h h-p">Kısmi</td><td class="h h-y">Var</td><td class="h h-y">Var</td><td>Temel / Standart / Premium</td></tr>
+          <tr><td>Altı paketin görünürlüğü</td><td class="h h-p">3 öne çıkıyor</td><td class="h h-p">3</td><td class="h h-y">6 paket</td><td>İki aile</td></tr>
+          <tr><td>"Nasıl abone olunur" adımları</td><td class="h h-p">Kısmi</td><td class="h h-y">4 adım</td><td class="h h-y">Var</td><td>SMS / uygulama</td></tr>
+          <tr><td>Mevcut üyelik geçişi</td><td class="h h-p">FAQ'da kısmi</td><td class="h h-n">Henüz yok</td><td class="h h-y">Var</td><td>Net senaryo</td></tr>
+          <tr><td>Marka organik #1-#2</td><td class="h h-y">Var</td><td class="h h-n">Yok</td><td class="h h-n">Yok</td><td>Marka gücü</td></tr>
+          <tr><td>Ticari yönlendirme / CTA</td><td class="h h-y">Var</td><td class="h h-n">Yok</td><td class="h h-n">Yok</td><td>Satın alma akışı</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+  </section>
+
+  <!-- TRENDS -->
+  <section class="section" id="trends">
+    <span class="eyebrow">Google Trends</span>
+    <h2>Arama İlgisi (Google Trends, Türkiye)</h2>
+    <p>Son 90 günde "turkcell one" arama ilgisinin Haziran başına kadar ölçüm eşiğinin altında seyrettiği, 9 Haziran'da lansman kaynaklı zirveye (göreli 100) ulaşıp ardından normalize olduğu gözlemlenmektedir (DataForSEO, TR).</p>
+    <div class="grid-2">
+      <div class="chart-card"><h4>Zaman içinde ilgi (göreli 0-100)</h4><div class="sub">Türkiye · son 90 gün</div><div class="chart-box"><canvas id="chTrend"></canvas></div></div>
+      <div class="chart-card"><h4>Bölgeye göre ilgi (ilk 5)</h4><div class="sub">Türkiye alt bölgeleri · gözlemlenen ilk sıralar</div><div class="chart-box"><canvas id="chRegion"></canvas></div></div>
+    </div>
+    <div class="grid-2">
+      <div class="card"><h4>Yükselen ilgili sorgular</h4><ul class="clist dot"><li>turkcell netflix</li><li>hbo max</li><li>turkcell one plus · turkcell one premium</li><li>youtube premium fiyat · netflix fiyat</li><li>google one <span class="small">(kıyas / kafa karışıklığı sinyali)</span></li></ul></div>
+      <div class="card"><h4>Yükselen ilgili konular</h4><ul class="clist dot"><li>HBO Max</li><li>YouTube Premium</li><li>Amazon Prime Video</li><li>5G</li><li>Para İadesi <span class="small">(cashback beklentisi)</span></li></ul><p class="small" style="margin-top:6px">Kaynak: DataForSEO Google Trends (ilgili konular, yükselen).</p></div>
+    </div>
+  </section>
+
+  <!-- SOSYAL -->
+  <section class="section" id="sosyal">
+    <span class="eyebrow">Sosyal Duygu</span>
+    <h2>Sosyal Duygu: X (Twitter) &amp; Ekşi Sözlük</h2>
+    <p>X ve Ekşi Sözlük canlı incelenmiştir. Genel tonun karışık ve olumluya yakın olduğu; fiyat avantajı ve zamanlama vurgusunun öne çıktığı, isim kafa karışıklığı ve deneyim temelli geri bildirimlerin gözlemlendiği görülmektedir. Aşağıdaki kartlarda gerçek kullanıcı adları, paylaşım özeti ve öne çıkan nokta yer almaktadır.</p>
+    <div class="grid-2">
+      <div class="chart-card"><h4>Gözlemlenen ton dağılımı</h4><div class="sub">"En Son" akışı örneklemi (gözlem)</div><div class="chart-box sm"><canvas id="chSent"></canvas></div></div>
+      <div>
+        <h4>Öne çıkan temalar</h4>
+        <ul class="clist dot"><li><b>Olumlu:</b> "daha uygun", "geçtiğimden beri rahatım", yükselen platform fiyatları sonrası zamanlama.</li><li><b>Kafa karışıklığı:</b> "ne oluyor", "Google One'dan mı esinlenmiş", bireysel toplam kıyası.</li><li><b>Geri bildirim:</b> YouTube Premium üyelik tipi (aile / bireysel) ve telefonla satış deneyimi.</li><li><b>Bağlam:</b> YouTube Premium fiyat artışları (yüksek görüntülenme) bundle değerini destekliyor.</li></ul>
+      </div>
+    </div>
+    <h3>X (Twitter) öne çıkan paylaşımlar</h3>
+    <div class="posts">
+      <div class="post"><div class="post__top"><span class="post__av">EG</span><span class="post__id"><b>Eda Güneş</b><span>@gunesliedaa · 11 Haz</span></span><span class="post__src src-x">X</span></div><div class="post__body">"Çok yükselmiş ya, buna para vereceğime turkcell one'a geçerim."</div><div class="post__meta"><span>~992 görüntülenme</span><span>Olumlu</span></div><div class="post__note pos"><span><b>Öne çıkan:</b> Platform fiyat artışları bundle'ı cazip kılıyor. Değer / tasarruf anlatısı bu motivasyonu karşılayabilir.</span></div></div>
+      <div class="post"><div class="post__top"><span class="post__av">NA</span><span class="post__id"><b>Nazan Aksoy</b><span>@Nazannaksoy · 11 Haz</span></span><span class="post__src src-x">X</span></div><div class="post__body">"Ben turkcell one'a geçtiğimden beri rahatım."</div><div class="post__meta"><span>~978 görüntülenme</span><span>Olumlu</span></div><div class="post__note pos"><span><b>Öne çıkan:</b> "Abonelik karmaşasını bitirme" mesajı kullanıcı dilinde karşılık buluyor.</span></div></div>
+      <div class="post"><div class="post__top"><span class="post__av">SG</span><span class="post__id"><b>Saim Gökalp</b><span>@GokalpSaim · 11 Haz</span></span><span class="post__src src-x">X</span></div><div class="post__body">"Turkcell one ne oluyor yaaa?"</div><div class="post__meta"><span>~49 görüntülenme</span><span>Soru</span></div><div class="post__note info"><span><b>Geliştirme alanı:</b> Net ve alıntılanabilir "nedir" tanımı, bu kafa karışıklığını sayfa ve AI yanıtı düzeyinde azaltabilir.</span></div></div>
+      <div class="post"><div class="post__top"><span class="post__av">TY</span><span class="post__id"><b>Tolunay Yılmaz</b><span>@3BTolunay · 10 Haz</span></span><span class="post__src src-x">X</span></div><div class="post__body">"Google One'dan ilhamla çıkmış gibi; Netflix, Prime, YouTube, HBO Max, TV+ tek pakette. Normalde hepsine ~₺380 ödenebiliyor."</div><div class="post__meta"><span>Alıntılı paylaşım</span><span>Kıyas</span></div><div class="post__note"><span><b>Geliştirme alanı:</b> Fiyat şüphesine karşı şeffaf "bireysel toplam vs paket" karşılaştırması değer algısını güçlendirebilir.</span></div></div>
+      <div class="post"><div class="post__top"><span class="post__av">Öz</span><span class="post__id"><b>Özkan</b><span>@argent134 · 13 Haz</span></span><span class="post__src src-x">X</span></div><div class="post__body">"Turkcell One ile ilgili YouTube Premium aile üyeliğim konusunda destek sürecim uzadı."</div><div class="post__meta"><span>~53 görüntülenme</span><span>Geri bildirim</span></div><div class="post__note"><span><b>Geliştirme alanı:</b> YouTube üyelik tipinin (bireysel / aile) sayfada net belirtilmesi ve geçiş adımlarının açıklanması beklenti yönetimine katkı sağlayabilir.</span></div></div>
+      <div class="post"><div class="post__top"><span class="post__av">DH</span><span class="post__id"><b>DonanımHaber</b><span>@donanimhaber · 11 Haz</span></span><span class="post__src src-x">X</span></div><div class="post__body">"YouTube Premium'a Türkiye'de zam: bireysel ve aile fiyatları yükseldi."</div><div class="post__meta"><span>~40 B görüntülenme</span><span>Bağlam</span></div><div class="post__note info"><span><b>Öne çıkan:</b> Yüksek görüntülenen bu içerik, bundle değer önermesinin zamanlamasını destekliyor.</span></div></div>
+    </div>
+    <h3>Ekşi Sözlük öne çıkan girdiler</h3>
+    <div class="posts">
+      <div class="post"><div class="post__top"><span class="post__av">ub</span><span class="post__id"><b>o senin kendi ubuntun</b><span>03.06.2026</span></span><span class="post__src src-eksi">Ekşi</span></div><div class="post__body">"Çeşitli dijital platform aboneliklerini faturana yansıt özelliğiyle sunan hizmet. Ayrı ayrı üye olmaya kıyasla daha avantajlı fiyatlar içeriyor."</div><div class="post__note pos"><span><b>Öne çıkan:</b> İlk tanım olumlu ve değer odaklı; aynı çerçeve sayfa anlatısında kullanılabilir.</span></div></div>
+      <div class="post"><div class="post__top"><span class="post__av">ik</span><span class="post__id"><b>ikinciadam</b><span>03.06.2026</span></span><span class="post__src src-eksi">Ekşi</span></div><div class="post__body">"En yüksek pakette bile HBO Max standart olduğu için 4K Dolby Vision yok; bu benim için önemli (Netflix'te var)."</div><div class="post__note"><span><b>Geliştirme alanı:</b> HBO Max kademe bilgisi (standart) ve hangi içeriğin hangi pakette 4K olduğu tabloda netleştirilebilir.</span></div></div>
+      <div class="post"><div class="post__top"><span class="post__av">lz</span><span class="post__id"><b>luzumsuzbilgi...</b><span>06.06.2026</span></span><span class="post__src src-eksi">Ekşi</span></div><div class="post__body">"En kapsamlı pakette her şeye ayrı ayrı abone olunca ~1.100 TL'lik maliyet 690 TL'ye sabitleniyor. 12 ay sabit fiyat enflasyon ortamında güvenli liman gibi."</div><div class="post__note pos"><span><b>Öne çıkan:</b> Kullanıcının kendi hesabıyla doğruladığı ~%40 tasarruf, değer bloğu için güçlü bir çerçeve.</span></div></div>
+      <div class="post"><div class="post__top"><span class="post__av">bn</span><span class="post__id"><b>bendogi</b><span>09.06.2026</span></span><span class="post__src src-eksi">Ekşi</span></div><div class="post__body">"Mevcuttaki TV+ HBO Max üyeliğim için cayma bedeli yansıyacak mı, geçiş ne kadar mantıklı?"</div><div class="post__note info"><span><b>Geliştirme alanı:</b> Mevcut üyelik geçişi ve cayma koşulu, net bir <span class="term" data-term="FAQPage Schema">FAQ</span> bloğuyla yanıtlanabilir.</span></div></div>
+      <div class="post"><div class="post__top"><span class="post__av">br</span><span class="post__id"><b>braincell</b><span>13.06.2026</span></span><span class="post__src src-eksi">Ekşi</span></div><div class="post__body">"Paketteki platformları TV+ uygulaması içinde izleyemeyeceksek gerek yok."</div><div class="post__note info"><span><b>Geliştirme alanı:</b> Platformların nerede / nasıl izleneceği (TV+ içi kullanım) sayfada açıkça anlatılabilir.</span></div></div>
+      <div class="post"><div class="post__top"><span class="post__av">ta</span><span class="post__id"><b>tayo</b><span>13.06.2026</span></span><span class="post__src src-eksi">Ekşi</span></div><div class="post__body">"En üst paketi 1 yıllık aldım, geçtim. Keşke TOD ve Disney de dahil olsaydı. YouTube tek hesap premium, aile değil."</div><div class="post__note"><span><b>Geliştirme alanı:</b> Kapsam beklentileri (Disney, YouTube aile) ve mevcut kapsam net belirtilebilir; YouTube üyelik tipi vurgulanabilir.</span></div></div>
+    </div>
+    <p class="small">Not: Paylaşımlar gözlem amaçlı, gerçek kullanıcı adlarıyla ve özetlenerek aktarılmıştır; birebir uzun alıntı ve kişisel tanımlayıcı bilgi paylaşılmamıştır. Kaynaklar: <a href="https://x.com/search?q=turkcell%20one&f=live" target="_blank" rel="noopener">X araması</a> · <a href="https://eksisozluk.com/turkcell-one--8107934" target="_blank" rel="noopener">Ekşi Sözlük</a>.</p>
+  </section>
+
+  <!-- SORULAR -->
+  <section class="section" id="sorular">
+    <span class="eyebrow">Kullanıcı Sesi</span>
+    <h2>Kullanıcı Soruları &amp; İçerik Eşleşmesi</h2>
+    <p>Ekşi, X ve PAA üzerinden derlenen sorular kümelenmiş ve yanıtlanabilecekleri sayfa bloğuyla eşleştirilmiştir.</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Küme</th><th>Örnek soru</th><th>Yanıt yeri</th><th><span class="term" data-term="FAQPage Schema">FAQ</span> adayı</th></tr></thead>
+      <tbody>
+        <tr><td><span class="pill p-gray">Tanım</span></td><td>Turkcell One nedir / ne işe yarar?</td><td>Hub hero + FAQ</td><td>Evet</td></tr>
+        <tr><td><span class="pill p-info">Karar</span></td><td>Hangi pakette ne var? En uygun hangisi?</td><td>Karşılaştırma tablosu</td><td>Evet</td></tr>
+        <tr><td><span class="pill p-info">Karar</span></td><td>Bireysel toplama göre değer sunuyor mu?</td><td>Değer bloğu</td><td>Evet</td></tr>
+        <tr><td><span class="pill p-amber">Geçiş</span></td><td>Mevcut Netflix / HBO üyeliğim ne olur? Cayma?</td><td>FAQ + geçiş bloğu</td><td>Evet</td></tr>
+        <tr><td><span class="pill p-amber">Kullanım</span></td><td>Platformları TV+ içinde mi izlerim?</td><td>FAQ</td><td>Evet</td></tr>
+        <tr><td><span class="pill p-amber">Kapsam</span></td><td>YouTube aile mi bireysel mi? Disney / Spotify?</td><td>FAQ + tablo dipnotu</td><td>Evet</td></tr>
+        <tr><td><span class="pill p-amber">Kalite</span></td><td>HBO Max 4K / Dolby Vision var mı?</td><td>Karşılaştırma tablosu dipnotu</td><td>Evet</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <!-- CRO / CX / UI-UX -->
+  <section class="section" id="cro">
+    <span class="eyebrow">CRO / CX / UI-UX</span>
+    <h2>Hub Sayfası Deneyim Değerlendirmesi</h2>
+    <p>Hub sayfası (<a href="https://www.turkcell.com.tr/turkcellone/" target="_blank" rel="noopener">/turkcellone/</a>) baştan sona incelenmiştir. Sayfa akışı hero, "Turkcell One'da Neler Var?", "Size En Uygun Paketi Seçin" (üç paket), "3 Adımda Turkcell One'lı Ol!", Sıkça Sorulan Sorular ve aydınlatma metni bölümlerinden oluşmaktadır. Aşağıdaki numaralı noktalar, dönüşüm ve deneyim açısından öne çıkan alanları göstermektedir.</p>
+    <div class="mock">
+      <div class="mock__hero">
+        <div class="eb">En popüler uygulamalar tek pakette!</div>
+        <h3>Turkcell One ile tüm üyeliklerini tek yerden yönet.</h3>
+        <p>Milyonlarca üyesi olan popüler uygulama üyeliklerinin tek yerden yönetildiği yepyeni bir dünya...</p>
+        <span class="mock__cta">Hemen Keşfet</span>
+        <div class="mock__logos"><span>TV+</span><span>HBO Max</span><span>Netflix</span><span>amazon prime</span><span>lifebox</span><span>fizy</span><span>YT Premium</span><span>YT Music</span><span>wonjo kids</span></div>
+        <span class="pin" style="top:14px;right:16px">1</span>
+        <span class="pin" style="top:128px;left:240px">2</span>
+        <span class="pin" style="bottom:54px;left:18px">3</span>
+      </div>
+    </div>
+    <p class="small">Üstte hub hero görünümünün açıklamalı (annotated) yeniden çizimi; altta canlı sayfanın gerçek ekran görüntüleri (DataForSEO / Playwright ile, 15 Haz 2026). <a href="https://www.turkcell.com.tr/turkcellone/" target="_blank" rel="noopener">Canlı sayfa →</a></p>
+    <div class="shot-grid">
+      <figure class="shot" data-full="assets/screenshots/hub-hero-desktop.png" data-cap="Canlı hub hero (masaüstü): 'Hemen Keşfet' yumuşak CTA ve platform logoları"><div class="shot__img wide"><img src="assets/screenshots/hub-hero-desktop.png" alt="Hub hero masaüstü canlı"></div><figcaption class="shot__cap"><b>Hub hero (canlı · masaüstü)</b><span>Hemen Keşfet · platform logoları</span></figcaption></figure>
+      <figure class="shot" data-full="assets/screenshots/hub-packages-desktop.png" data-cap="Canlı hub: 'Size En Uygun Paketi Seçin' - Star 500 / Plus 600 (En Çok Tercih Edilen) / Premium 690, Netflix kademeleri görünür"><div class="shot__img wide"><img src="assets/screenshots/hub-packages-desktop.png" alt="Hub paket seçimi masaüstü canlı"></div><figcaption class="shot__cap"><b>Hub paket seçimi (canlı)</b><span>3 paket · Netflix kademeleri görünür</span></figcaption></figure>
+    </div>
+    <div class="grid-2">
+      <div>
+        <h4>Öne çıkan deneyim noktaları</h4>
+        <ul class="nlist">
+          <li><b>Hero CTA:</b> "Hemen Keşfet" yumuşak bir yönlendirme sunmaktadır; fiyat veya paket çapasının hero alanında görünür olması karar yolculuğunu kısaltabilir.</li>
+          <li><b>Paket gösterimi:</b> Hub'da üç paket (Star / Plus / Premium) öne çıkmaktadır; HBO Max içermeyen üç paketin (Mega / Maksi / Ultra) ve kademe farklarının da görünür olması seçenek algısını genişletebilir.</li>
+          <li><b>Karşılaştırma:</b> Paketler arası "hangi pakette ne var" karşılaştırma tablosunun bulunmaması, kararı zorlaştıran bir alan olarak öne çıkmaktadır.</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Ek deneyim gözlemleri</h4>
+        <ul class="clist imp">
+          <li>Değer / tasarruf bloğu (bireysel toplam vs paket) en güçlü satın alma motivasyonu olmasına rağmen sayfada öne çıkmamaktadır.</li>
+          <li>HBO Max kademe dipnotu (standart) önemli bir kullanıcı sorusuna denk gelmekte; daha görünür kılınabilir.</li>
+          <li>Aydınlatma metni sayfa içinde uzun yer kaplamakta; özetlenip ayrı sayfaya bağlanması okunabilirliği artırabilir.</li>
+          <li>Sosyal kanıt (kullanıcı sayısı, puan, yorum) ve güven sinyalleri öne çıkarılabilir.</li>
+          <li>Mobil görünümde hero görseli metnin altına inmekte; öncelik sırası gözden geçirilebilir.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="shot-grid">
+      <figure class="shot" data-full="assets/screenshots/turkcell-listing-mobile.png" data-cap="Liste sayfası (mobil) · Star / Plus / Premium"><div class="shot__img"><img src="assets/screenshots/turkcell-listing-mobile.png" alt="Liste mobil"></div><figcaption class="shot__cap"><b>Liste (mobil)</b><span>3 paket görünümü</span></figcaption></figure>
+      <figure class="shot" data-full="assets/screenshots/turkcell-detail-mobile.png" data-cap="Paket detay (mobil) · One Plus 600 / 850"><div class="shot__img"><img src="assets/screenshots/turkcell-detail-mobile.png" alt="Detay mobil"></div><figcaption class="shot__cap"><b>Paket detay (mobil)</b><span>Taahhütlü / taahhütsüz</span></figcaption></figure>
+      <figure class="shot" data-full="assets/screenshots/turkcell-listing-desktop.png" data-cap="Liste sayfası (masaüstü)"><div class="shot__img wide"><img src="assets/screenshots/turkcell-listing-desktop.png" alt="Liste masaüstü"></div><figcaption class="shot__cap"><b>Liste (masaüstü)</b><span>Kartlı görünüm</span></figcaption></figure>
+    </div>
+  </section>
+
+  <!-- AUDIT + CWV -->
+  <section class="section" id="audit">
+    <span class="eyebrow">Sayfa İçi &amp; CWV</span>
+    <h2>Sayfa İçi Değerlendirme &amp; Core Web Vitals</h2>
+    <p>Hub sayfası canlı incelenmiştir (15 Haz 2026). Teknik temelin sağlam olduğu, görsel teslimi ve birkaç sayfa içi alanın geliştirmeye açık olduğu gözlemlenmektedir.</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Alan</th><th>Mevcut durum (gözlem)</th><th>Değerlendirme</th></tr></thead>
+      <tbody>
+        <tr><td><span class="term" data-term="Title Tag">Title</span></td><td>"Turkcell One ile üyeliklerini tek yerden yönet | Turkcell" (57 krk; ölçüldü)</td><td><span class="prio prio-yuk">Yüksek</span></td></tr>
+        <tr><td><span class="term" data-term="Meta Description">Meta Description</span></td><td>"Milyonlarca üyesi olan popüler uygulama üyeliklerinin, tek yerden yönetildiği yepyeni bir dünyayla tanış." (105 krk)</td><td><span class="prio prio-yuk">Yüksek</span></td></tr>
+        <tr><td><span class="term" data-term="Canonical">Canonical</span></td><td>Sonunda "/" ile self-canonical (ölçüldü)</td><td><span class="prio prio-ort">Orta</span></td></tr>
+        <tr><td><span class="term" data-term="H1">H1</span></td><td>1 adet, konu ile uyumlu (ölçüldü)</td><td><span class="prio prio-tak">Uygun</span></td></tr>
+        <tr><td>H2 hiyerarşisi</td><td>27 adet H2 (paket adı / fiyat ve banner metinleri dahil; ölçüldü)</td><td><span class="prio prio-ort">Orta</span></td></tr>
+        <tr><td><span class="term" data-term="Schema">Schema</span> / JSON-LD</td><td>WebPage + Product + <span class="term" data-term="FAQPage Schema">FAQPage</span> mevcut</td><td><span class="prio prio-tak">Uygun</span></td></tr>
+        <tr><td>Görsel alt metni</td><td>Görsellerde alt metin eksik (no_image_alt); ~59 görsel</td><td><span class="prio prio-onc">Öncelikli</span></td></tr>
+        <tr><td>Görsel formatı / <span class="term" data-term="CLS">CLS</span></td><td>webp / srcset ve görsel boyut tanımı geliştirme alanı</td><td><span class="prio prio-yuk">Yüksek</span></td></tr>
+        <tr><td>Yükleme süresi</td><td>Etkileşime hazır ~3,2 sn · DOM complete ~8,1 sn · 28 script · render engelleyen kaynak</td><td><span class="prio prio-onc">Öncelikli</span></td></tr>
+        <tr><td><span class="term" data-term="LCP">LCP</span></td><td>Hero görsel önceliklendirmesi (preload + fetchpriority) geliştirilebilir</td><td><span class="prio prio-onc">Öncelikli</span></td></tr>
+        <tr><td><span class="term" data-term="INP">INP</span></td><td>28 script ve yüksek DOM süresi etkileşim gecikmesi riski taşımaktadır; gerçek INP saha verisi (CrUX / PSI) ile teyit edilebilir</td><td><span class="prio prio-yuk">Yüksek</span></td></tr>
+        <tr><td><span class="term" data-term="Internal Linking">İç bağlantı</span></td><td>Hub sayfasından 7 iç bağlantı (ölçüldü); platform içeriklerine köprü artırılabilir</td><td><span class="prio prio-ort">Orta</span></td></tr>
+        <tr><td>Genel sayfa skoru</td><td>DataForSEO onpage skoru 86,36 / 100; <span class="term" data-term="Internal Linking">iç bağlantı</span> ve hız ana geliştirme başlıkları</td><td><span class="prio prio-tak">Uygun</span></td></tr>
+      </tbody>
+    </table></div>
+    <div class="callout callout--info"><b>Okuma.</b> Şema altyapısının mevcut olması olumlu bir temeldir. DataForSEO sayfa içi ölçümünde başlık, açıklama, canonical ve H1 uyumlu görünmektedir; en yüksek getirili alanlar görsellerde alt metin, webp / srcset ve boyut tanımı, render engelleyen kaynakların azaltılması, hero görselin <span class="term" data-term="LCP">LCP</span> önceliklendirmesi (preload + fetchpriority) ve hub içi iç bağlantının (ölçülen 7) güçlendirilmesidir. DataForSEO Labs hub için henüz ölçülü organik kelime döndürmemektedir (yeni sayfa). Sunulan etkileşim ve yükleme süreleri (<span class="term" data-term="TTI">TTI</span>, <span class="term" data-term="DOM">DOM</span> complete) proxy göstergelerdir; gerçek <span class="term" data-term="LCP">LCP</span> / <span class="term" data-term="CLS">CLS</span> / <span class="term" data-term="INP">INP</span> saha verisi CrUX veya PSI ile alınabilir. Kaynak: DataForSEO on_page ölçümü + canlı gözlem + müşteri SEO dokümanı (15 Haz 2026). <a href="https://www.turkcell.com.tr/turkcellone/" target="_blank" rel="noopener">Sayfa →</a></div>
+  </section>
+
+  <!-- AKSIYON -->
+  <section class="section" id="aksiyon">
+    <span class="eyebrow">Aksiyon</span>
+    <h2>Aksiyon &amp; İçerik Brief</h2>
+    <p>Aşağıdaki maddeler etki ve öncelik etiketiyle sunulmaktadır. Tümü değerlendirme niteliğindedir. Ayrıntılı aksiyon listesi rapora ek Word dokümanında yer almaktadır.</p>
+    <div class="tabs" id="aksTabs">
+      <button class="tab active" data-tab="a1">Teknik</button>
+      <button class="tab" data-tab="a2">İçerik &amp; PAA</button>
+      <button class="tab" data-tab="a3">Core Web Vitals</button>
+      <button class="tab" data-tab="a4">İçerik Brief örneği</button>
+    </div>
+    <div class="tab-panel active" data-panel="a1">
+      <div class="table-wrap"><table>
+        <thead><tr><th>Öneri</th><th>Detay</th><th>Öncelik</th></tr></thead>
+        <tbody>
+          <tr><td><span class="term" data-term="Title Tag">Title</span> tazeliği</td><td>"Turkcell One ile Tüm Platformlar Tek Paket | Turkcell" yönünde güncelleme</td><td><span class="prio prio-yuk">Yüksek</span></td></tr>
+          <tr><td><span class="term" data-term="Meta Description">Description</span> tazeliği</td><td>Dijital abonelik paketi ve tek fatura vurgusuyla güncel açıklama</td><td><span class="prio prio-yuk">Yüksek</span></td></tr>
+          <tr><td><span class="term" data-term="FAQPage Schema">FAQPage</span> tam kapsam</td><td>Tüm soru ve cevapların işaretlenmesi ve güncel tutulması</td><td><span class="prio prio-yuk">Yüksek</span></td></tr>
+          <tr><td>Başlık hiyerarşisi</td><td>Banner metinlerinin H2'den standart metne taşınması</td><td><span class="prio prio-ort">Orta</span></td></tr>
+          <tr><td>URL ve <span class="term" data-term="Canonical">canonical</span></td><td>Sonda "/" tutarlılığının gözden geçirilmesi</td><td><span class="prio prio-ort">Orta</span></td></tr>
+        </tbody>
+      </table></div>
+    </div>
+    <div class="tab-panel" data-panel="a2">
+      <div class="table-wrap"><table>
+        <thead><tr><th>Aksiyon</th><th>Hedef kelime / soru</th><th>Öncelik</th></tr></thead>
+        <tbody>
+          <tr><td>Paket karşılaştırma tablosu (makine okunur)</td><td>hangi pakette ne var, netflix kademesi, hbo max 4K</td><td><span class="prio prio-onc">Öncelikli</span></td></tr>
+          <tr><td>Değer / tasarruf bloğu</td><td>bireysel toplam vs paket, ~%40 tasarruf</td><td><span class="prio prio-onc">Öncelikli</span></td></tr>
+          <tr><td>Platform fiyat / üyelik köprü içerikleri</td><td>amazon prime üyelik (60,5B/KD6), youtube premium fiyat (27,1B/KD18), hbo max fiyat (5,4B/KD3)</td><td><span class="prio prio-onc">Öncelikli</span></td></tr>
+          <tr><td>Geçiş &amp; cayma FAQ bloğu</td><td>mevcut netflix/hbo üyeliği, cayma bedeli, TV+ içinde izleme</td><td><span class="prio prio-yuk">Yüksek</span></td></tr>
+          <tr><td>Kapsam netliği</td><td>YouTube bireysel/aile, Disney/Spotify durumu</td><td><span class="prio prio-yuk">Yüksek</span></td></tr>
+          <tr><td><span class="term" data-term="Internal Linking">İç bağlantı</span> köprüsü</td><td>netflix turkcell, hbo max, youtube premium içeriklerinden hub'a</td><td><span class="prio prio-ort">Orta</span></td></tr>
+        </tbody>
+      </table></div>
+    </div>
+    <div class="tab-panel" data-panel="a3">
+      <ul class="nlist">
+        <li><b><span class="term" data-term="LCP">LCP</span>:</b> ana banner görselinin lazy dışında tutulması, fetchpriority ile önceliklendirilmesi ve head içinde preload edilmesi değerlendirilebilir.</li>
+        <li><b><span class="term" data-term="CLS">CLS</span>:</b> üst görsel alanına aspect-ratio, marka logolarına ve paket kartlarına sabit boyut tanımlanması ile kayma azaltılabilir.</li>
+        <li><b>Görsel:</b> ~59 görselin webp / srcset'e taşınması ve alt metinlerin eklenmesi (DataForSEO ölçümünde alt metin eksik) hem hız hem erişilebilirlik açısından fayda sağlayabilir.</li>
+        <li><b>Yükleme:</b> render engelleyen kaynakların ve script yükünün (28 script) azaltılması, etkileşime hazır olma süresini (~3,2 sn) iyileştirebilir.</li>
+        <li><b><span class="term" data-term="INP">INP</span>:</b> ana iş parçacığını meşgul eden script yükünün bölünmesi ve uzun görevlerin parçalanması etkileşim gecikmesini iyileştirebilir; gerçek değer CrUX / PSI ile teyit edilebilir.</li>
+        <li><b><span class="term" data-term="Internal Linking">İç bağlantı</span>:</b> hub'dan platform ve karşılaştırma içeriklerine iç bağlantı sayısının (ölçülen 7) artırılması değerlendirilebilir.</li>
+        <li><b>Font:</b> font-display: swap ve font preload ile metin kaymasının önüne geçilmesi fayda sağlayabilir.</li>
+      </ul>
+    </div>
+    <div class="tab-panel" data-panel="a4">
+      <div class="card" style="background:#fff">
+        <h4>Örnek içerik brief: "Turkcell One paket karşılaştırma"</h4>
+        <ul class="clist dot" style="font-size:.88rem">
+          <li><b>Amaç:</b> Karar aşamasındaki kullanıcıya altı paketin farkını net göstermek; AI atfı için makine okunur tablo sunmak.</li>
+          <li><b>Hedef sorular:</b> hangi pakette ne var, en uygun hangisi, HBO Max'li / HBO Max'siz fark, Netflix kademesi.</li>
+          <li><b>Yapı:</b> Kısa "nedir" girişi (alıntılanabilir) → karşılaştırma tablosu (paket / platform / Netflix kademesi / fiyat) → değer bloğu (bireysel toplam vs paket) → SSS → CTA.</li>
+          <li><b>Schema:</b> <span class="term" data-term="FAQPage Schema">FAQPage</span> + Product + <span class="term" data-term="AggregateOffer">AggregateOffer</span> (lowPrice 330 / highPrice 690 / offerCount 6, TRY) + ItemList; dateModified güncel.</li>
+          <li><b>Ton:</b> şeffaf, kanıtsız üstünlük iddiasından uzak, fiyat / koşul tarih damgalı.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- GELISTIRME ALANLARI -->
+  <section class="section" id="firsat">
+    <span class="eyebrow">Geliştirme Alanları</span>
+    <h2>Mevcut Sayfalara Eklenebilir Geliştirme Alanları</h2>
+    <p>Aşağıdaki başlıklar ayrı sayfalar olarak değil, mevcut hub ve liste sayfalarına eklenebilecek bölümler veya geliştirme alanları olarak değerlendirilebilir. Skor; niyet, marka uyumu ve içerik boşluğu birlikte değerlendirilerek verilmiştir.</p>
+    <div class="table-wrap"><table id="oppT">
+      <thead><tr><th data-sort="text">Eklenebilir alan<span class="arr">↕</span></th><th data-sort="text">Tür<span class="arr">↕</span></th><th>Karşıladığı soru</th><th data-sort="num">Fırsat<span class="arr">↕</span></th></tr></thead>
+      <tbody>
+        <tr><td>Paket karşılaştırma tablosu bloğu</td><td>Hub içi bölüm</td><td>hangi pakette ne var, fark, en uygun</td><td><span class="pill p-pos">9</span></td></tr>
+        <tr><td>Değer / tasarruf bloğu</td><td>Hub içi bölüm</td><td>bireysel toplama göre değer mi</td><td><span class="pill p-pos">9</span></td></tr>
+        <tr><td>Geçiş &amp; cayma FAQ genişletmesi</td><td>FAQ bloğu</td><td>mevcut üyelik, cayma, TV+ içinde izleme</td><td><span class="pill p-pos">8</span></td></tr>
+        <tr><td>Platform fiyat / üyelik köprü içerikleri</td><td>Bilgi bloğu / iç bağlantı</td><td>youtube premium fiyat, amazon prime üyelik</td><td><span class="pill p-pos">8</span></td></tr>
+        <tr><td>"Nasıl abone olunur" görsel adımları</td><td>Hub içi bölüm</td><td>nasıl abone olunur, aktivasyon</td><td><span class="pill p-amber">7</span></td></tr>
+        <tr><td>Kapsam dipnotu (Disney / Spotify / YouTube tipi)</td><td>Tablo dipnotu / FAQ</td><td>disney var mı, youtube aile mi</td><td><span class="pill p-amber">6</span></td></tr>
+      </tbody>
+    </table></div>
+    <div class="callout callout--info"><b>Not.</b> Bu blokların "nedir + tablo + <span class="term" data-term="FAQPage Schema">FAQ</span>" deseniyle kurulması, AI atfı ve <span class="term" data-term="Long-tail">long-tail</span> görünürlük açısından fayda sağlayabilir; hub içi konumlandırma ile otoritenin hub'da toplanması değerlendirilebilir.</div>
+  </section>
+
+  <!-- SOZLUK -->
+  <section class="section" id="sozluk">
+    <span class="eyebrow">Ek</span>
+    <h2>Terim Sözlüğü &amp; Kaynaklar</h2>
+    <div class="grid-2">
+      <div>
+        <h4>Terim sözlüğü</h4>
+        <ul class="clist dot" style="font-size:.86rem">
+          <li><b>SERP:</b> arama motoru sonuç sayfası</li>
+          <li><b>AI Overview:</b> Google'ın üretken yapay zekayla oluşturduğu özet cevap</li>
+          <li><b>GEO:</b> üretken motorlar için içerik görünürlüğü çalışması</li>
+          <li><b>KD:</b> kelime zorluğu (0-100)</li>
+          <li><b>Content Gap:</b> rakipte / talepte olup markada olmayan içerik alanı</li>
+          <li><b>Schema / FAQPage:</b> yapılandırılmış veri işaretlemesi</li>
+          <li><b>CWV / LCP / CLS:</b> sayfa deneyimi metrikleri</li>
+          <li><b>Long-tail:</b> spesifik, düşük hacimli, yüksek niyetli kelimeler</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Kaynaklar (kontrol edilebilir)</h4>
+        <ul class="clist">
+          <li><a href="https://www.turkcell.com.tr/turkcellone/" target="_blank" rel="noopener">Hub sayfası</a></li>
+          <li><a href="https://www.turkcell.com.tr/paket-ve-tarifeler/turkcell-one" target="_blank" rel="noopener">Liste sayfası</a></li>
+          <li><a href="https://eksisozluk.com/turkcell-one--8107934" target="_blank" rel="noopener">Ekşi Sözlük girdisi</a></li>
+          <li><a href="https://www.donanimhaber.com/turkcell-one-tek-abonelikle-netflix-youtube-hbo-max-bir-arada--206627" target="_blank" rel="noopener">DonanımHaber makalesi</a></li>
+          <li><a href="https://www.webtekno.com/turkcell-netflix-hbo-max-prime-video-youtube-premium-ortak-abonelik-paketi-duyurdu-h218160.html" target="_blank" rel="noopener">Webtekno makalesi</a></li>
+          <li><a href="https://x.com/search?q=turkcell%20one&f=live" target="_blank" rel="noopener">X canlı arama</a> · <a href="https://trends.google.com/trends/explore?date=today%203-m&geo=TR&q=turkcell%20one" target="_blank" rel="noopener">Google Trends</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  </main>
+</div>
+
+<div class="lightbox" id="lightbox"><span class="lightbox__close" id="lbClose">&times;</span><img id="lbImg" src="" alt=""><div class="lightbox__cap" id="lbCap"></div></div>
+
+<footer>Turkcell One · Rakip Analizi &amp; SEO / GEO Değerlendirmesi · Inbound SEO · 15 Haziran 2026 · Veri: DataForSEO (TR) + Ahrefs çapraz + canlı SERP / AI Overview. Hacimler aylık arama, günlük yaklaşık değer aylık değerin ~1/30'udur. Rakip veriler anlık gözlemdir.</footer>
+
+<script>
+const GLOSSARY={
+ "SERP":"Search Engine Results Page: arama motoru sonuç sayfası.",
+ "AI Overview":"Google'ın arama sonuçlarında üretken yapay zeka ile oluşturduğu özet cevap (AI Bakışı).",
+ "GEO":"Generative Engine Optimization: üretken arama motorlarında görünürlük çalışması.",
+ "KD":"Keyword Difficulty: bir kelimede ilk 10'a girmenin tahmini zorluğu (0-100).",
+ "DR":"Domain Rating: alan adının backlink profili gücü (0-100).",
+ "Schema":"Schema.org / JSON-LD yapılandırılmış veri işaretlemesi.",
+ "FAQPage Schema":"Soru-cevap içeriğini arama motoruna tanıtan yapılandırılmış veri.",
+ "Canonical":"Bir içeriğin asıl / tercih edilen URL'sini belirten etiket.",
+ "LCP":"Largest Contentful Paint: en büyük içeriğin görünür olma süresi.",
+ "CLS":"Cumulative Layout Shift: sayfa yüklenirken oluşan görsel kayma miktarı.",
+ "CWV":"Core Web Vitals: Google'ın sayfa deneyimi metrikleri (LCP, CLS, INP).",
+ "INP":"Interaction to Next Paint: kullanıcı etkileşimine sayfanın yanıt verme gecikmesi; üç Core Web Vitals metriğinden biridir.",
+ "TTI":"Time to Interactive: sayfanın kullanıcı etkileşimine hazır olma süresi (proxy gösterge).",
+ "DOM":"Document Object Model: tarayıcının sayfa için oluşturduğu yapısal model; DOM complete sayfanın tamamen kurulma süresidir.",
+ "AggregateOffer":"Birden çok fiyat / teklif içeren bir ürün ailesini lowPrice, highPrice ve offerCount ile tanıtan schema.org tipi.",
+ "GSC":"Google Search Console.",
+ "Title Tag":"Sayfa başlığı etiketi; arama sonucundaki mavi başlık.",
+ "Meta Description":"Arama sonucunda başlığın altında görünen sayfa açıklaması.",
+ "H1":"Sayfanın birincil başlık etiketi.",
+ "Internal Linking":"Site içi bağlantılama.",
+ "Intent":"Arama niyeti: bilgi, ticari, işlemsel veya marka.",
+ "Long-tail":"Daha spesifik, düşük hacimli ve genellikle yüksek niyetli arama kelimeleri.",
+ "Content Gap":"İçerik boşluğu: rakipte veya talepte olup markada bulunmayan içerik alanı.",
+ "Impression":"Gösterim: bir sonucun arama sonuçlarında görünme sayısı.",
+ "CTR":"Click Through Rate: tıklama oranı."
+};
+document.querySelectorAll('.term').forEach(el=>{const k=el.dataset.term;if(GLOSSARY[k])el.dataset.tip=GLOSSARY[k];});
+
+const navLinks=[...document.querySelectorAll('.sidenav a')];
+const secs=navLinks.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);
+const spy=()=>{let cur=secs[0];for(const s of secs){if(s.getBoundingClientRect().top<=140)cur=s}navLinks.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+cur.id))};
+window.addEventListener('scroll',spy,{passive:true});spy();
+
+document.querySelectorAll('.tabs').forEach(g=>{const tabs=g.querySelectorAll('.tab');const sec=g.closest('.section');tabs.forEach(t=>t.addEventListener('click',()=>{tabs.forEach(x=>x.classList.remove('active'));t.classList.add('active');sec.querySelectorAll('.tab-panel').forEach(p=>p.classList.toggle('active',p.dataset.panel===t.dataset.tab));}));});
+
+const lb=document.getElementById('lightbox'),lbImg=document.getElementById('lbImg'),lbCap=document.getElementById('lbCap');
+document.querySelectorAll('.shot').forEach(s=>{s.setAttribute('tabindex','0');s.setAttribute('role','button');const openShot=()=>{lbImg.src=s.dataset.full;lbImg.alt=s.dataset.cap||'Büyütülmüş görsel';lbCap.textContent=s.dataset.cap||'';lb.classList.add('open');};s.addEventListener('click',openShot);s.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openShot();}});});
+const closeLb=()=>lb.classList.remove('open');
+const lbCloseEl=document.getElementById('lbClose');lbCloseEl.setAttribute('tabindex','0');lbCloseEl.setAttribute('role','button');lbCloseEl.setAttribute('aria-label','Kapat');lbCloseEl.addEventListener('click',closeLb);lbCloseEl.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();closeLb();}});
+lb.addEventListener('click',e=>{if(e.target===lb)closeLb()});lbImg.addEventListener('click',e=>e.stopPropagation());
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLb()});
+
+document.querySelectorAll('th[data-sort]').forEach(th=>{th.addEventListener('click',()=>{const table=th.closest('table'),tb=table.tBodies[0],idx=[...th.parentNode.children].indexOf(th);const type=th.dataset.sort,asc=!(th.dataset.asc==='1');th.dataset.asc=asc?'1':'0';[...tb.rows].sort((a,b)=>{let x=a.cells[idx].innerText.trim(),y=b.cells[idx].innerText.trim();if(type==='num'){x=parseFloat(x.replace(/[^\d,.-]/g,'').replace(/\./g,'').replace(',','.'))||0;y=parseFloat(y.replace(/[^\d,.-]/g,'').replace(/\./g,'').replace(',','.'))||0;return asc?x-y:y-x;}return asc?x.localeCompare(y,'tr'):y.localeCompare(x,'tr');}).forEach(r=>tb.appendChild(r));});});
+const pf=document.getElementById('poolFilter');
+if(pf)pf.addEventListener('input',()=>{const q=pf.value.toLowerCase();document.querySelectorAll('#poolTable tbody tr').forEach(r=>{r.style.display=r.innerText.toLowerCase().includes(q)?'':'none'})});
+
+const NAVY='#1a4290',BLUE='#1d5aff',CYAN='#00c2ff',YEL='#ffd400',CORAL='#ff6b5b',GRAY='#cbd5e6',GREEN='#1f9d57',PURP='#7c4dd1';
+Chart.defaults.font.family='Segoe UI,system-ui,sans-serif';Chart.defaults.font.size=12;Chart.defaults.color='#5a6783';
+const legB={plugins:{legend:{position:'bottom',labels:{boxWidth:11,font:{size:10.5},padding:10}}}};
+const noLeg={plugins:{legend:{display:false}}};
+new Chart(chSerp,{type:'doughnut',data:{labels:['Turkcell (organik)','Editöryel (DH / Webtekno)','UGC (Ekşi / Şikayetvar)'],datasets:[{data:[4,2,2],backgroundColor:[YEL,CORAL,PURP],borderWidth:2,borderColor:'#fff'}]},options:{cutout:'60%',...legB}});
+new Chart(chAi,{type:'doughnut',data:{labels:['Webtekno','Instagram + DonanımHaber','Turkcell (ziyaret adımı)'],datasets:[{data:[45,35,20],backgroundColor:[CORAL,PURP,YEL],borderWidth:2,borderColor:'#fff'}]},options:{cutout:'60%',...legB}});
+new Chart(chDemand,{type:'bar',data:{labels:['netflix','amazon prime','hbo max','disney plus','youtube premium','netflix fiyat','youtube premium fiyat','amazon prime üyelik','hbo max fiyat','netflix paketleri'],datasets:[{label:'aylık arama',data:[2740000,450000,368000,301000,165000,49500,27100,60500,5400,6600],backgroundColor:[NAVY,NAVY,GREEN,CORAL,GREEN,GREEN,GREEN,GREEN,GREEN,GREEN],borderRadius:6}]},options:{indexAxis:'y',...noLeg,scales:{x:{type:'logarithmic',title:{display:true,text:'aylık arama (log) · DataForSEO'}}}}});
+const gapKD=['KD 6','KD 11','KD 18','KD 15','KD 3','KD 5'];
+new Chart(chGap,{type:'bar',data:{labels:['amazon prime üyelik','netflix fiyat','youtube premium fiyat','netflix paketleri','hbo max fiyat','spotify premium fiyat'],datasets:[{label:'aylık hacim',data:[60500,49500,27100,6600,5400,1600],backgroundColor:['#1f9d57','#1f9d57','#5db07a','#5db07a','#1f9d57','#1f9d57'],borderRadius:6}]},options:{scales:{y:{beginAtZero:true,title:{display:true,text:'aylık hacim · DataForSEO'}}},plugins:{legend:{display:false},tooltip:{callbacks:{afterLabel:(c)=>gapKD[c.dataIndex]}}}}});
+new Chart(chTrend,{type:'line',data:{labels:['15 Mar','29 Mar','12 Nis','26 Nis','10 May','24 May','1 Haz','5 Haz','8 Haz','9 Haz','10 Haz','11 Haz','12 Haz','13 Haz','15 Haz'],datasets:[{label:'İlgi (0-100)',data:[0,0,0,0,0,0,3,11,16,100,96,55,61,23,18],borderColor:NAVY,backgroundColor:'rgba(29,90,255,.12)',fill:true,tension:.35,pointRadius:3,pointBackgroundColor:NAVY}]},options:{...noLeg,scales:{y:{beginAtZero:true,max:110}}}});
+new Chart(chRegion,{type:'bar',data:{labels:['Konya','İstanbul','Ordu','Trabzon','Eskişehir'],datasets:[{data:[100,29,22,21,21],backgroundColor:[NAVY,BLUE,CYAN,'#6aa0ff','#9cc0ff'],borderRadius:7}]},options:{indexAxis:'y',...noLeg,scales:{x:{beginAtZero:true,max:100}}}});
+new Chart(chSent,{type:'doughnut',data:{labels:['Olumlu','Nötr / bilgi','Kafa karışıklığı / soru','Geri bildirim'],datasets:[{data:[42,30,18,10],backgroundColor:[GREEN,GRAY,BLUE,CORAL],borderWidth:2,borderColor:'#fff'}]},options:{cutout:'60%',...legB}});
+
+/* Erişilebilirlik: sıralanabilir başlıklara klavye desteği + grafiklere aria etiketi */
+document.querySelectorAll('th[data-sort]').forEach(th=>{th.setAttribute('tabindex','0');th.setAttribute('role','button');th.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();th.click();}});});
+const CHART_ARIA={chSerp:'turkcell one ilk sayfa görünürlük dağılımı grafiği',chAi:'AI yanıtlarında gözlemlenen kaynak dağılımı grafiği',chDemand:'Platform talep havuzu aylık arama hacmi grafiği',chGap:'Düşük zorlukta content gap kelimeleri grafiği',chTrend:'turkcell one Google Trends ilgi grafiği',chRegion:'Bölgeye göre ilgi grafiği',chSent:'Sosyal duygu ton dağılımı grafiği'};
+Object.keys(CHART_ARIA).forEach(id=>{const c=document.getElementById(id);if(c){c.setAttribute('role','img');c.setAttribute('aria-label',CHART_ARIA[id]);}});
+</script>
+</body>
+</html>
