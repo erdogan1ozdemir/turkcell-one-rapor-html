@@ -45,7 +45,11 @@ img{max-width:100%;display:block}
 .agency-logo{height:20px;width:auto;display:block;opacity:.92}
 
 .layout{max-width:var(--maxw);margin:0 auto;display:grid;grid-template-columns:230px 1fr;gap:24px;padding:24px 22px 80px}
-.sidenav{position:sticky;top:74px;align-self:start;height:fit-content;max-height:calc(100vh - 92px);overflow:auto;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:13px;box-shadow:var(--shadow)}
+.sidenav{position:sticky;top:74px;align-self:start;height:fit-content;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:13px;margin-left:-16px;box-shadow:0 12px 34px rgba(16,35,63,.12),0 3px 8px rgba(16,35,63,.06);z-index:1}
+.sidenav::before{content:"";position:absolute;inset:-3px;border-radius:calc(var(--r-lg) + 3px);background:conic-gradient(from var(--toc-ang,0deg),rgba(255,123,82,.6),rgba(31,71,194,.5),rgba(25,192,255,.45),rgba(255,123,82,.6));filter:blur(11px);opacity:.5;z-index:-1;animation:tocGlow 7s linear infinite}
+@property --toc-ang{syntax:"<angle>";initial-value:0deg;inherits:false}
+@keyframes tocGlow{to{--toc-ang:360deg}}
+@media(prefers-reduced-motion:reduce){.sidenav::before{animation:none}}
 .sidenav h4{font-size:.66rem;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-3);margin:2px 8px 9px}
 .sidenav a{display:flex;align-items:center;gap:9px;padding:7px 11px;border-radius:10px;color:var(--ink-2);font-size:.83rem;font-weight:600;transition:.15s}
 .sidenav a:hover{background:var(--surface-2);color:var(--navy);text-decoration:none}
@@ -279,7 +283,7 @@ footer{max-width:var(--maxw);margin:0 auto;padding:22px;color:var(--ink-3);font-
   <section class="section hero" id="ozet">
     <span class="eyebrow">Yönetici Özeti · 15 Haziran 2026</span>
     <div class="hero__grid">
-      <div class="hero__pt"><span class="hero__pt-k">1 · Mevcut durum</span><b>Marka SERP'i kontrol altında</b><p class="hero__pt-b">"turkcell one" aramasında organik ilk iki sıra markadadır (One Plus sayfası ve hub). İlk sayfanın bir bölümü editöryel ve sosyal içeriktir.</p></div>
+      <div class="hero__pt"><span class="hero__pt-k">1 · Mevcut durum</span><b>Marka SERP'i kontrol altında</b><p class="hero__pt-b">"turkcell one" aramasında organik ilk iki sıra markadadır (hub ve paket listesi). İlk sayfanın bir bölümü editöryel ve sosyal içeriktir.</p></div>
       <div class="hero__pt"><span class="hero__pt-k">2 · En büyük fırsat</span><b>Düşük rekabetli içerik</b><p class="hero__pt-b">"fiyat / üyelik / paket" aramaları düşük rekabet taşır; operatör rakipler bu alanda halihazırda görünür. Marka sayfasından köprü kurulabilir.</p></div>
       <div class="hero__pt"><span class="hero__pt-k">3 · Öne çıkan aksiyon</span><b>Yapılandırılmış içerik</b><p class="hero__pt-b">Karşılaştırma tablosu, fiyat karşılaştırma bloğu ve <span class="term" data-term="AI Overview">AI Overview</span>'da markayı kaynak gösteren (<span class="term" data-term="mention">mention</span>) içerik değerlendirilebilir.</p></div>
     </div>
@@ -314,7 +318,7 @@ footer{max-width:var(--maxw);margin:0 auto;padding:22px;color:var(--ink-3);font-
   <section class="section">
     <span class="eyebrow">Ana Bulgular</span>
     <h2>Yedi başlıkta öne çıkanlar</h2>
-    <div class="insight"><b>Marka <span class="term" data-term="SERP">SERP</span>'i markanın kontrolünde.</b> "turkcell one" aramasında organik ilk iki sıra markadadır (One Plus paket detayı ve hub). İlk sayfanın bir bölümü editöryel, kullanıcı içeriği ve sosyal sonuçlardan oluşmaktadır.</div>
+    <div class="insight"><b>Marka <span class="term" data-term="SERP">SERP</span>'i markanın kontrolünde.</b> "turkcell one" aramasında organik ilk iki sıra markadadır (hub #1, paket listesi #2). İlk sayfanın bir bölümü editöryel, kullanıcı içeriği ve sosyal sonuçlardan oluşmaktadır.</div>
     <div class="insight"><b>Asıl fırsat düşük rekabetli içerik alanlarında.</b> "fiyat / üyelik / paket" aramaları yüksek hacim ve düşük <span class="term" data-term="KD">KD</span> taşımaktadır; operatör rakipler (Vodafone, Türk Telekom) bu aramalarda kampanya ve blog sayfalarıyla halihazırda görünmektedir. Marka sayfasından bu içeriğe köprü kurulması fırsat sunabilir.</div>
     <div class="insight"><b>Düşük zorlukta content gap kelimeleri mevcut.</b> "amazon prime üyelik" (~60,5 bin / <span class="term" data-term="KD">KD</span> 6), "netflix fiyat" (~49,5 bin / KD 11), "hbo max fiyat" (~5,4 bin / KD 3) gibi yüksek hacimli ve düşük zorlukta terimler değerlendirilebilir niteliktedir (DataForSEO Labs KD).</div>
     <div class="insight"><b>AI Overview'da kaynak çoğunlukla 3. tarafta.</b> "turkcell one nedir" için <span class="term" data-term="AI Overview">AI Overview</span>; tanım ve paket dökümünde Webtekno, Instagram ve DonanımHaber'i birincil kaynak göstermekte, markayı yalnızca "sayfayı ziyaret et / abone ol" adımında anmaktadır. Tanım kısmında markanın da kaynak gösterilmesi (<span class="term" data-term="mention">mention</span>) fırsat alanıdır.</div>
@@ -362,20 +366,21 @@ footer{max-width:var(--maxw);margin:0 auto;padding:22px;color:var(--ink-3);font-
   <section class="section" id="serp">
     <span class="eyebrow">SERP</span>
     <h2>SERP &amp; Marka Görünürlüğü</h2>
-    <p>"turkcell one" canlı <span class="term" data-term="SERP">SERP</span>'inde (masaüstü) marka güçlü konumdadır; ilk sayfanın bir bölümü editöryel, kullanıcı içeriği (UGC) ve sosyal sonuçlardan oluşmaktadır. Bu sorguda organik #1 One Plus paket detay sayfası, #2 hub'dır. "turkcell one nedir" sorgusunda ise liste sayfası (One Plus / Ultra / Star sitelink'leriyle) #1 olarak görünmektedir.</p>
+    <p>"turkcell one" canlı <span class="term" data-term="SERP">SERP</span>'inde (masaüstü) marka güçlü konumdadır; ilk sayfanın bir bölümü editöryel, kullanıcı içeriği (UGC) ve sosyal sonuçlardan oluşmaktadır. Bu sorguda organik #1 hub sayfasıdır (turkcellone), #2 paket listesidir (Turkcell One Paketleri); One Plus içeriği liste snippet'inde öne çıkmaktadır. #9'da Turkcell Pasaj da görünmektedir. "turkcell one nedir" sorgusunda ise paket listesi sitelink'leriyle öne çıkmaktadır.</p>
     <div class="table-wrap">
       <table id="serpTable">
         <thead><tr><th data-sort="num">Sıra<span class="arr">↕</span></th><th>Sonuç</th><th data-sort="text">Sahip<span class="arr">↕</span></th><th data-sort="text">Tip<span class="arr">↕</span></th><th>Bağlantı</th></tr></thead>
         <tbody>
-          <tr><td>1</td><td>Turkcell One Plus (paket detay · ₺600)</td><td>Turkcell</td><td><span class="pill p-pos">Organik</span></td><td><a href="https://www.turkcell.com.tr/paket-ve-tarifeler/turkcell-one/turkcell-one-plus" target="_blank" rel="noopener">One Plus</a></td></tr>
-          <tr><td>2</td><td>Turkcell One ile üyeliklerini tek yerden yönet</td><td>Turkcell</td><td><span class="pill p-pos">Organik</span></td><td><a href="https://www.turkcell.com.tr/turkcellone/" target="_blank" rel="noopener">Hub</a></td></tr>
-          <tr><td>3</td><td>Kullanıcı soruları (PAA) bloğu</td><td>Google</td><td><span class="pill p-info">PAA</span></td><td>·</td></tr>
-          <tr><td>4</td><td>turkcell one (kullanıcı yorumları)</td><td>Ekşi Sözlük</td><td><span class="pill p-amber">UGC</span></td><td><a href="https://eksisozluk.com/turkcell-one--8107934" target="_blank" rel="noopener">Ekşi</a></td></tr>
-          <tr><td>5</td><td>Tek abonelikle Netflix, YouTube, HBO Max…</td><td>DonanımHaber</td><td><span class="pill p-amber">Editöryel</span></td><td><a href="https://www.donanimhaber.com/turkcell-one-tek-abonelikle-netflix-youtube-hbo-max-bir-arada--206627" target="_blank" rel="noopener">Makale</a></td></tr>
-          <tr><td>6</td><td>Faturalı Tarifeler (One Maksi · 430 TL)</td><td>Turkcell</td><td><span class="pill p-pos">Organik</span></td><td><a href="https://www.turkcell.com.tr/paket-ve-tarifeler/faturali-hat" target="_blank" rel="noopener">Liste</a></td></tr>
-          <tr><td>7</td><td>Turkcell One Şikayetleri (1,5/5 · 13.210 oy)</td><td>Şikayetvar</td><td><span class="pill p-amber">UGC</span></td><td><a href="https://www.sikayetvar.com/turkcell/one" target="_blank" rel="noopener">Şikayetvar</a></td></tr>
-          <tr><td>8</td><td>Turkcell One Nedir? Paketleri ve Fiyatları</td><td>Webtekno</td><td><span class="pill p-amber">Editöryel</span></td><td><a href="https://www.webtekno.com/turkcell-netflix-hbo-max-prime-video-youtube-premium-ortak-abonelik-paketi-duyurdu-h218160.html" target="_blank" rel="noopener">Makale</a></td></tr>
-          <tr><td>10</td><td>Turkcell Pasaj · "Turkcell One Paketlerini Keşfet"</td><td>Turkcell</td><td><span class="pill p-pos">Organik</span></td><td><a href="https://www.turkcell.com.tr/pasaj" target="_blank" rel="noopener">Pasaj</a></td></tr>
+          <tr><td>1</td><td>Turkcell One ile üyeliklerini tek yerden yönet (₺500-690)</td><td>Turkcell</td><td><span class="pill p-pos">Organik</span></td><td><a href="https://www.turkcell.com.tr/turkcellone/" target="_blank" rel="noopener">Hub →</a></td></tr>
+          <tr><td>2</td><td>Turkcell One Paketleri (One Plus · 600 TL · %39 indirim)</td><td>Turkcell</td><td><span class="pill p-pos">Organik</span></td><td><a href="https://www.turkcell.com.tr/paket-ve-tarifeler/turkcell-one" target="_blank" rel="noopener">Liste →</a></td></tr>
+          <tr><td>3</td><td>turkcell one (kullanıcı yorumları)</td><td>Ekşi Sözlük</td><td><span class="pill p-amber">UGC</span></td><td><a href="https://eksisozluk.com/turkcell-one--8107934" target="_blank" rel="noopener">Ekşi →</a></td></tr>
+          <tr><td>4</td><td>Kullanıcı soruları (PAA) bloğu</td><td>Google</td><td><span class="pill p-info">PAA</span></td><td>·</td></tr>
+          <tr><td>5</td><td>Turkcell One: Tek abonelikle Netflix, YouTube, HBO Max…</td><td>DonanımHaber</td><td><span class="pill p-amber">Editöryel</span></td><td><a href="https://www.donanimhaber.com/turkcell-one-tek-abonelikle-netflix-youtube-hbo-max-bir-arada--206627" target="_blank" rel="noopener">Makale →</a></td></tr>
+          <tr><td>6</td><td>Turkcell One Nedir? Paketleri ve Fiyatları</td><td>Webtekno</td><td><span class="pill p-amber">Editöryel</span></td><td><a href="https://www.webtekno.com/turkcell-netflix-hbo-max-prime-video-youtube-premium-ortak-abonelik-paketi-duyurdu-h218160.html" target="_blank" rel="noopener">Makale →</a></td></tr>
+          <tr><td>7</td><td>Turkcell One Şikayetleri (1,5/5 · 13.210 oy)</td><td>Şikayetvar</td><td><span class="pill p-amber">UGC</span></td><td><a href="https://www.sikayetvar.com/turkcell/one" target="_blank" rel="noopener">Şikayetvar →</a></td></tr>
+          <tr><td>8</td><td>Netflix, YouTube Premium, Amazon Prime… (One paket dökümü)</td><td>X · donanimhaber</td><td><span class="pill p-amber">Sosyal</span></td><td><a href="https://x.com/donanimhaber/status/2064392687269151077" target="_blank" rel="noopener">X →</a></td></tr>
+          <tr><td>9</td><td>Turkcell Pasaj · "Turkcell One Paketlerini Keşfet"</td><td>Turkcell</td><td><span class="pill p-pos">Organik</span></td><td><a href="https://www.turkcell.com.tr/pasaj" target="_blank" rel="noopener">Pasaj →</a></td></tr>
+          <tr><td>10</td><td>Turkcell One nedir? paketleri, platformları ve fiyat listesi</td><td>İşçi Haber</td><td><span class="pill p-amber">Editöryel</span></td><td><a href="https://www.iscihaber.net/gundem/turkcell-one-nedir-turkcell-one-paketleri-platformlari-ve-abonelik-fiyat-listesi/236526" target="_blank" rel="noopener">Makale →</a></td></tr>
         </tbody>
       </table>
     </div>
@@ -386,31 +391,31 @@ footer{max-width:var(--maxw);margin:0 auto;padding:22px;color:var(--ink-3);font-
         <ul class="clist q"><li>Turkcell One nedir / ne demek?</li><li>Turkcell'in en ucuz paketi hangisi?</li><li>Turkcell'de 1 yıllık paket ne kadar?</li><li>Turkcell 20 GB 1000 dk 1000 SMS paketi nedir?</li><li>Turkcell taahhüt yenilenmezse ne olur?</li></ul>
       </div>
       <div>
-        <h4>Kanıt: canlı SERP</h4>
+        <h4>İlgili ekran görüntüleri</h4>
         <div class="shot-grid" style="margin-top:6px">
-          <figure class="shot" data-full="assets/screenshots/ss-serp-one-masaustu.png" data-cap="Masaüstü: 'turkcell one' Google SERP - organik #1 One Plus, #2 hub, PAA, Ekşi, DonanımHaber, Webtekno, Şikayetvar"><div class="shot__img wide"><img src="assets/screenshots/ss-serp-one-masaustu.png" alt="turkcell one SERP masaüstü"></div><figcaption class="shot__cap"><b>SERP (masaüstü)</b><span>Google TR · canlı</span></figcaption></figure>
+          <figure class="shot" data-full="assets/screenshots/ss-serp-one-masaustu.png" data-cap="Masaüstü: 'turkcell one' Google SERP - organik #1 hub, #2 paket listesi, Ekşi, PAA, DonanımHaber, Webtekno, Şikayetvar, Pasaj"><div class="shot__img wide"><img src="assets/screenshots/ss-serp-one-masaustu.png" alt="turkcell one SERP masaüstü"></div><figcaption class="shot__cap"><b>SERP (masaüstü)</b><span>Google TR · canlı</span></figcaption></figure>
           <figure class="shot" data-full="assets/screenshots/ss-serp-one-mobil.png" data-cap="Mobil: 'turkcell one' AI Bakışı + organik sonuçlar"><div class="shot__img"><img src="assets/screenshots/ss-serp-one-mobil.png" alt="turkcell one SERP mobil"></div><figcaption class="shot__cap"><b>AI Bakışı + SERP (mobil)</b><span>Google TR · canlı</span></figcaption></figure>
         </div>
       </div>
     </div>
-    <div class="callout callout--info"><b>Sayfa rol haritası ve kanibalizasyon.</b> "turkcell one" sorgusunda One Plus detay (#1) ile hub (#2), "turkcell one nedir" sorgusunda ise liste (#1) aynı anda sıralanmaktadır. Sayfalar marka sahipli olduğundan rakibe kayıp riski düşüktür; ancak sinyallerin dağılmaması için rol ayrımı netleştirilebilir: hub = marka / tanım / "nedir", liste = paket karşılaştırma ve karar, detay = işlemsel / satın alma. "turkcell one" ana sorgusunda hangi sayfanın öne çıkacağı, iç bağlantı çapa metinleri ve <span class="term" data-term="Canonical">canonical</span> ile sinyal konsolidasyonu bir kural setiyle değerlendirilebilir.</div>
+    <div class="callout callout--info"><b>Sayfa rol haritası ve kanibalizasyon.</b> "turkcell one" sorgusunda hub (#1) ile paket listesi (#2) aynı anda sıralanmaktadır; "turkcell one nedir" sorgusunda da paket listesi öne çıkmaktadır. Sayfalar marka sahipli olduğundan rakibe kayıp riski düşüktür; ancak sinyallerin dağılmaması için rol ayrımı netleştirilebilir: hub = marka / tanım / "nedir", liste = paket karşılaştırma ve karar, detay = işlemsel / satın alma. "turkcell one" ana sorgusunda hangi sayfanın öne çıkacağı, iç bağlantı çapa metinleri ve <span class="term" data-term="Canonical">canonical</span> ile sinyal konsolidasyonu bir kural setiyle değerlendirilebilir.</div>
   </section>
 
   <!-- GEO -->
   <section class="section" id="geo">
     <span class="eyebrow">AI &amp; GEO</span>
     <h2>AI Overview &amp; Generative Engine Optimization</h2>
-    <p>"turkcell one nedir" sorgusunda Google'ın <span class="term" data-term="AI Overview">AI Overview</span> yanıtı tanım ve paket dökümünde Webtekno, Instagram ve DonanımHaber'i birincil kaynak göstermekte; markaya atıf çoğunlukla "sayfayı ziyaret et / abone ol" adımında verilmektedir. Marka görünür olmakla birlikte tanımsal bilgi otoritesini büyük ölçüde üçüncü taraf yayıncılarla paylaşmaktadır.</p>
-    <div class="callout callout--info"><b>AI Overview'in marka tanımı (alıntı).</b> "Turkcell One, Netflix, HBO Max, Amazon Prime ve YouTube Premium gibi popüler dijital içerik ve yayın platformlarını tek faturada birleştiren ortak bir abonelik paketidir. Tek tek üye olma derdini ortadan kaldırır ve 12 ay boyunca sabit fiyat avantajı sunar." <span class="small">Kaynak atfı: Webtekno · Instagram · DonanımHaber. Paket dökümü (Star 500 / Plus 600 / Premium 690) atfı: Webtekno. "Sayfayı ziyaret et" atfı: Turkcell + Webtekno.</span></div>
+    <p>"turkcell one nedir" sorgusunda Google'ın <span class="term" data-term="AI Overview">AI Overview</span> yanıtı tanım ve paket dökümünde Webtekno, Instagram ve DonanımHaber'i birincil kaynak göstermekte; markaya <span class="term" data-term="mention">mention</span> çoğunlukla "sayfayı ziyaret et / abone ol" adımında verilmektedir. Marka görünür olmakla birlikte tanımsal bilgi otoritesini büyük ölçüde üçüncü taraf yayıncılarla paylaşmaktadır.</p>
+    <div class="callout callout--info"><b>AI Overview'in marka tanımı (alıntı).</b> "Turkcell One, Netflix, HBO Max, Amazon Prime ve YouTube Premium gibi popüler dijital içerik ve yayın platformlarını tek faturada birleştiren ortak bir abonelik paketidir. Tek tek üye olma derdini ortadan kaldırır ve 12 ay boyunca sabit fiyat avantajı sunar." <span class="small">Kaynak <span class="term" data-term="mention">mention</span>: Webtekno · Instagram · DonanımHaber. Paket dökümü (Star 500 / Plus 600 / Premium 690): Webtekno. "Sayfayı ziyaret et" adımı: Turkcell + Webtekno.</span></div>
     <div class="grid-3">
       <figure class="shot" data-full="assets/screenshots/ss-aio-nedir-masaustu.png" data-cap="Masaüstü: 'turkcell one nedir' AI Bakışı + kaynak kartları (Webtekno, Instagram, DonanımHaber, Turkcell)"><div class="shot__img wide"><img src="assets/screenshots/ss-aio-nedir-masaustu.png" alt="AI Bakışı nedir masaüstü"></div><figcaption class="shot__cap"><b>AI Bakışı + kaynaklar (masaüstü)</b><span>Google TR · canlı</span></figcaption></figure>
       <figure class="shot" data-full="assets/screenshots/ss-aio-nedir-mobil.png" data-cap="Mobil: 'turkcell one nedir' AI Bakışı tam metni - tanım + 4 madde, kaynak çoğunlukla 3. tarafta"><div class="shot__img"><img src="assets/screenshots/ss-aio-nedir-mobil.png" alt="AI Bakışı nedir mobil"></div><figcaption class="shot__cap"><b>AI Bakışı tam metin (mobil)</b><span>Kaynak: Webtekno +3</span></figcaption></figure>
       <figure class="shot" data-full="assets/screenshots/ss-serp-nedir-mobil.png" data-cap="Mobil: 'turkcell one nedir' AI Bakışı + organik sonuçlar"><div class="shot__img"><img src="assets/screenshots/ss-serp-nedir-mobil.png" alt="nedir SERP mobil"></div><figcaption class="shot__cap"><b>"nedir" SERP (mobil)</b><span>Google TR · canlı</span></figcaption></figure>
     </div>
-    <h3>GEO yol haritası: atfı markaya yaklaştırmak</h3>
+    <h3>GEO yol haritası: <span class="term" data-term="mention">mention</span>'ı markaya yaklaştırmak</h3>
     <div class="grid-2">
-      <ul class="nlist"><li><b>Alıntılanabilir tanım:</b> "Turkcell One nedir?" yanıtının sayfanın üstünde net ve tek paragraf biçiminde konumlandırılması değerlendirilebilir.</li><li><b>Eksiksiz <span class="term" data-term="FAQPage Schema">FAQPage</span>:</b> tüm soru ve cevapların işaretlenmesi, üretken motorların yapılandırılmış içeriği tercih etmesi açısından fayda sağlayabilir.</li><li><b>Karşılaştırma tablosu:</b> "hangi pakette ne var" bilgisinin makine okunur tabloyla sunulması değerlendirilebilir (Webtekno bu yapıyla atıf almaktadır).</li></ul>
-      <ul class="nlist"><li><b>Değer bloğu:</b> bireysel toplam ile paket fiyatının karşılaştırıldığı net bir özet eklenmesi fayda sağlayabilir.</li><li><b>Alıntılanabilir pasaj yapısı:</b> her başlığın hemen altına 40-60 kelimelik, tek başına anlamlı yanıt pasajları yerleştirilmesi üretken motorların pasaj alıntısını kolaylaştırabilir.</li><li><b>AI tarayıcı erişimi:</b> robots.txt içinde GPTBot, Google-Extended ve PerplexityBot erişiminin gözden geçirilmesi (gerekirse llms.txt) üretken motor görünürlüğü açısından değerlendirilebilir.</li><li><b>Yayıncı atfı:</b> atıf alan Webtekno ve DonanımHaber gibi kaynaklara resmi basın / veri sayfası ile güncel bilgi sağlanması, markanın eş-kaynak konumunu güçlendirebilir.</li><li><b>Tazelik ve otorite:</b> dateModified güncelliği, resmi açıklama ve güven bloklarının güçlendirilmesi markanın tercih edilen kaynak olmasına katkı sağlayabilir.</li></ul>
+      <ul class="nlist"><li><b>Alıntılanabilir tanım:</b> "Turkcell One nedir?" yanıtının sayfanın üstünde net ve tek paragraf biçiminde konumlandırılması değerlendirilebilir.</li><li><b>Eksiksiz <span class="term" data-term="FAQPage Schema">FAQPage</span>:</b> tüm soru ve cevapların işaretlenmesi, üretken motorların yapılandırılmış içeriği tercih etmesi açısından fayda sağlayabilir.</li><li><b>Karşılaştırma tablosu:</b> "hangi pakette ne var" bilgisinin makine okunur tabloyla sunulması değerlendirilebilir (Webtekno bu yapıyla <span class="term" data-term="mention">mention</span> almaktadır).</li></ul>
+      <ul class="nlist"><li><b>Değer bloğu:</b> bireysel toplam ile paket fiyatının karşılaştırıldığı net bir özet eklenmesi fayda sağlayabilir.</li><li><b>Alıntılanabilir pasaj yapısı:</b> her başlığın hemen altına 40-60 kelimelik, tek başına anlamlı yanıt pasajları yerleştirilmesi üretken motorların pasaj alıntısını kolaylaştırabilir.</li><li><b>AI tarayıcı erişimi:</b> robots.txt içinde GPTBot, Google-Extended ve PerplexityBot erişiminin gözden geçirilmesi (gerekirse llms.txt) üretken motor görünürlüğü açısından değerlendirilebilir.</li><li><b>Publisher <span class="term" data-term="mention">mention</span>:</b> <span class="term" data-term="mention">mention</span> alan Webtekno ve DonanımHaber gibi kaynaklara resmi basın / veri sayfası ile güncel bilgi sağlanması, markanın eş-kaynak konumunu güçlendirebilir.</li><li><b>Tazelik ve otorite:</b> dateModified güncelliği, resmi açıklama ve güven bloklarının güçlendirilmesi markanın tercih edilen kaynak olmasına katkı sağlayabilir.</li></ul>
     </div>
   </section>
 
@@ -443,11 +448,21 @@ footer{max-width:var(--maxw);margin:0 auto;padding:22px;color:var(--ink-3);font-
         </tbody>
       </table>
     </div>
-    <div class="callout callout--pos"><b>Rakip kanıtı.</b> Operatör rakipler bu düşük rekabetli aramalarda kampanya ve blog sayfalarıyla halihazırda görünmektedir: Vodafone "amazon prime üyelik" (#6) ve "netflix paketleri" (#6), Türk Telekom "netflix paketleri" (#8, Prime Netflix tarifesi). Turkcell ise "hbo max fiyat" çevresinde TV+ HBO Max kampanya sayfasıyla (#9) zaten yer almaktadır. Aynı deseni Turkcell One hub sayfasının da kullanması, bu talebi yakalayıp One paketlerine köprülemesi için fırsat sunabilir. Disney+ ve Spotify paket kapsamında bulunmadığından, ilgili talep yalnızca <span class="term" data-term="FAQPage Schema">FAQ</span> ve konumlandırma notu olarak değerlendirilebilir.</div>
-    <h4>Operatörler bu aramalarda nasıl görünüyor (canlı SERP ekran görüntüleri)</h4>
+    <div class="callout callout--pos"><b>Rakip kanıtı (canlı SERP doğrulaması).</b> Düşük rekabetli "fiyat / paket" aramalarında operatör rakipler kampanya, blog ve tarife sayfalarıyla halihazırda ilk sayfada görünmektedir. "netflix paketleri" sorgusunda Vodafone Red blogu ve Türk Telekom Prime Netflix tarifesi aynı anda sıralanır; bu sorguda bir <span class="term" data-term="AI Overview">AI Overview</span> da bulunmaktadır. "amazon prime üyelik" sorgusunda ise resmi Amazon sayfaları sonuçları domine etmekte, operatör görünmemektedir; düşük <span class="term" data-term="KD">KD</span> nedeniyle köprü içerik için fırsat sürmektedir. Aynı desenin Turkcell One hub sayfasıyla kullanılması, bu talebi yakalayıp One paketlerine köprülemesi için değerlendirilebilir.</div>
+    <h4>Hangi sorgu, hangi rakip sayfasını getiriyor</h4>
+    <p class="small">Aşağıdaki bağlantılar canlı Google TR sonuçlarından doğrulanmıştır; tıklanarak açılabilir.</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Sorgu</th><th>Rakip sonuç</th><th>Sıra (organik)</th><th>Bağlantı</th></tr></thead>
+      <tbody>
+        <tr><td>netflix paketleri</td><td>Vodafone Red blog · "Netflix Paketleri ve Üyelik Planları"</td><td><span class="pill p-pos">#5</span></td><td><a href="https://www.vodafone.com.tr/red/blog/netflix-paketleri" target="_blank" rel="noopener">Vodafone →</a></td></tr>
+        <tr><td>netflix paketleri</td><td>Türk Telekom · "Prime Netflix 30 GB" tarifesi</td><td><span class="pill p-pos">#7</span></td><td><a href="https://bireysel.turktelekom.com.tr/mobil/mevcut-musteri-tarife-ve-paketleri/tum-faturali-tarifeler/prime-netflix-30-gb" target="_blank" rel="noopener">Türk Telekom →</a></td></tr>
+        <tr><td>amazon prime üyelik</td><td>Resmi Amazon / Prime Video sayfaları domine ediyor (operatör görünmüyor)</td><td><span class="pill p-gray">-</span></td><td><a href="https://www.amazon.com.tr/prime" target="_blank" rel="noopener">Amazon →</a></td></tr>
+      </tbody>
+    </table></div>
+    <h4>İlgili ekran görüntüleri</h4>
     <div class="shot-grid">
-      <figure class="shot" data-full="assets/screenshots/competitor-vodafone-amazon.png" data-cap="Vodafone (canlı): 'amazon prime üyelik' aramasında 3 ay Amazon Prime kampanya sayfasıyla sıralanıyor"><div class="shot__img wide"><img src="assets/screenshots/competitor-vodafone-amazon.png" alt="Vodafone Amazon Prime kampanya sayfası"></div><figcaption class="shot__cap"><b>Vodafone · Amazon Prime</b><span>"amazon prime üyelik" #6</span></figcaption></figure>
-      <figure class="shot" data-full="assets/screenshots/competitor-tt-netflix.png" data-cap="Türk Telekom (canlı): 'netflix paketleri' aramasında Prime Netflix tarifesiyle sıralanıyor"><div class="shot__img wide"><img src="assets/screenshots/competitor-tt-netflix.png" alt="Türk Telekom Prime Netflix tarifesi"></div><figcaption class="shot__cap"><b>Türk Telekom · Prime Netflix</b><span>"netflix paketleri" #8</span></figcaption></figure>
+      <figure class="shot" data-full="assets/screenshots/competitor-tt-netflix.png" data-cap="Türk Telekom (canlı): 'netflix paketleri' aramasında Prime Netflix tarifesiyle sıralanıyor (organik #7)"><div class="shot__img wide"><img src="assets/screenshots/competitor-tt-netflix.png" alt="Türk Telekom Prime Netflix tarifesi" loading="lazy"></div><figcaption class="shot__cap"><b>Türk Telekom · Prime Netflix</b><span>"netflix paketleri" organik #7</span></figcaption></figure>
+      <figure class="shot" data-full="assets/screenshots/competitor-vodafone-amazon.png" data-cap="Vodafone (canlı): dijital platform kampanya sayfası deseni"><div class="shot__img wide"><img src="assets/screenshots/competitor-vodafone-amazon.png" alt="Vodafone dijital platform kampanya sayfası" loading="lazy"></div><figcaption class="shot__cap"><b>Vodafone · kampanya deseni</b><span>dijital platform köprü içeriği</span></figcaption></figure>
     </div>
 
   </section>
@@ -466,7 +481,7 @@ footer{max-width:var(--maxw);margin:0 auto;padding:22px;color:var(--ink-3);font-
     <div class="tab-panel" data-panel="ri1">
       <div class="grid-2">
         <div>
-          <span class="tag t-ed">Webtekno · AI atıflı</span>
+          <span class="tag t-ed">Webtekno · AI mention'lı</span>
           <h4>Net tanım + tablo + adımlar</h4>
           <p class="small">Sayfada "Turkcell One nedir?", Paket / Platform / Fiyat tablosu ve dört adımlı "nasıl abone olunur" akışı bulunmaktadır. Bu yapı, AI yanıtlarının tercih ettiği biçimle örtüşmektedir.</p>
           <div class="card" style="background:#fff;border-style:dashed">
@@ -543,20 +558,23 @@ footer{max-width:var(--maxw);margin:0 auto;padding:22px;color:var(--ink-3);font-
           <ul class="clist dot" style="font-size:.85rem">
             <li>Red 40 / 60 / 100 GB tarifeleri (₺750 / 900 / 1.100) ve <b>3 ay dijital platform üyeliği</b> (Amazon Prime vb.) avantajı</li>
             <li><b>Sınırsız Uygulamalar:</b> Sınırsız İletişim (WhatsApp · Messenger), Sınırsız Sosyal (Instagram · Facebook · X) ve Sınırsız Eğlence (YouTube · Netflix · Amazon Prime · Spotify) paketleriyle uygulama bazlı, kotadan düşmeyen kullanım</li>
-            <li>"amazon prime üyelik" (#6) ve "netflix paketleri" (#6) aramalarında kampanya / blog ile görünür</li>
+            <li>"netflix paketleri" aramasında Red blogu ile organik <b>#5</b> görünür</li>
           </ul>
           <p class="small"><b>Fark:</b> Vodafone dijital avantajı <b>mobil tarifeye ve uygulama bazlı internet faydasına</b> bağlar (platform üyeliği 3 ay, uygulama kullanımı kotadan düşmez). Turkcell One ise <b>bağımsız ve kalıcı dijital bundle</b> olarak farklılaşır.</p>
-          <figure class="shot" data-full="assets/screenshots/ss-vodafone-red-sinirsiz.png" data-cap="Vodafone Red Sınırsız Uygulamalar (canlı): Red 40/60/100 GB + 3 ay dijital platform üyeliği + Sınırsız İletişim / Sosyal / Eğlence paketleri"><div class="shot__img wide"><img src="assets/screenshots/ss-vodafone-red-sinirsiz.png" alt="Vodafone Red Sınırsız Uygulamalar sayfası" loading="lazy"></div><figcaption class="shot__cap"><b>Vodafone Red (canlı)</b><span>Sınırsız Uygulamalar · 3 ay dijital üyelik</span></figcaption></figure>
         </div>
         <div class="card">
           <span class="tag t-op">Türk Telekom</span>
           <h4>Prime / Yeni Nesil tarifeler</h4>
           <ul class="clist dot" style="font-size:.85rem">
             <li>Ek Faydalar: Tivibu, YouTube Premium, hediye çeki; Prime Netflix tarifesi</li>
-            <li>"netflix paketleri" (#8) aramasında tarife sayfasıyla görünür</li>
+            <li>"netflix paketleri" aramasında Prime Netflix tarife sayfasıyla organik <b>#7</b> görünür</li>
+            <li>Dijital fayda mobil tarifeye eklidir; bağımsız bir bundle değildir</li>
           </ul>
-          <figure class="shot" data-full="assets/screenshots/competitor-turktelekom-prime.png" data-cap="Türk Telekom Yeni Nesil Prime Tarifeler · Ek Faydalar deseni"><div class="shot__img wide"><img src="assets/screenshots/competitor-turktelekom-prime.png" alt="Türk Telekom Prime tarifeler"></div><figcaption class="shot__cap"><b>Türk Telekom (Prime)</b><span>Ek Faydalar deseni</span></figcaption></figure>
         </div>
+      </div>
+      <div class="grid-2" style="margin-top:14px">
+        <figure class="shot" data-full="assets/screenshots/ss-vodafone-red-sinirsiz.png" data-cap="Vodafone Red Sınırsız Uygulamalar (canlı): Red 40/60/100 GB + 3 ay dijital platform üyeliği + Sınırsız İletişim / Sosyal / Eğlence paketleri"><div class="shot__img wide"><img src="assets/screenshots/ss-vodafone-red-sinirsiz.png" alt="Vodafone Red Sınırsız Uygulamalar sayfası" loading="lazy"></div><figcaption class="shot__cap"><b>Vodafone Red (canlı)</b><span>Sınırsız Uygulamalar · 3 ay dijital üyelik</span></figcaption></figure>
+        <figure class="shot" data-full="assets/screenshots/competitor-turktelekom-prime.png" data-cap="Türk Telekom Yeni Nesil Prime Tarifeler · Ek Faydalar deseni"><div class="shot__img wide"><img src="assets/screenshots/competitor-turktelekom-prime.png" alt="Türk Telekom Prime tarifeler" loading="lazy"></div><figcaption class="shot__cap"><b>Türk Telekom (Prime)</b><span>Ek Faydalar deseni</span></figcaption></figure>
       </div>
       <p class="small">Operatörlerin bu kelimelerde sıralandığı canlı SERP ekran görüntüleri "Talep Havuzu" bölümündedir.</p>
     </div>
@@ -589,7 +607,7 @@ footer{max-width:var(--maxw);margin:0 auto;padding:22px;color:var(--ink-3);font-
         <ul class="clist dot"><li><b>Olumlu:</b> "daha uygun", "geçtiğimden beri rahatım", yükselen platform fiyatları sonrası zamanlama.</li><li><b>Kafa karışıklığı:</b> "ne oluyor", "Google One'dan mı esinlenmiş", bireysel toplam kıyası.</li><li><b>Geri bildirim:</b> YouTube Premium üyelik tipi (aile / bireysel) ve telefonla satış deneyimi.</li><li><b>Bağlam:</b> YouTube Premium fiyat artışları (yüksek görüntülenme) bundle değerini destekliyor.</li></ul>
       </div>
     </div>
-    <h3>Kanıt: canlı ekran görüntüleri</h3>
+    <h3>İlgili ekran görüntüleri</h3>
     <div class="shot-grid" style="margin-bottom:8px">
       <figure class="shot" data-full="assets/screenshots/ss-x-turkcell-one.png" data-cap="X (Twitter): 'turkcell one' canlı arama akışı (1/2) - gerçek kullanıcı paylaşımları"><div class="shot__img"><img src="assets/screenshots/ss-x-turkcell-one.png" alt="X turkcell one arama akışı 1" loading="lazy"></div><figcaption class="shot__cap"><b>X (1/2)</b><span>değer · zamanlama</span></figcaption></figure>
       <figure class="shot" data-full="assets/screenshots/ss-x-turkcell-one-2.png" data-cap="X (Twitter): 'turkcell one' canlı arama akışı (2/2) - değer kıyası ve bundle açıklamaları"><div class="shot__img"><img src="assets/screenshots/ss-x-turkcell-one-2.png" alt="X turkcell one arama akışı 2" loading="lazy"></div><figcaption class="shot__cap"><b>X (2/2)</b><span>"daha ucuz" · bundle</span></figcaption></figure>
@@ -810,7 +828,7 @@ footer{max-width:var(--maxw);margin:0 auto;padding:22px;color:var(--ink-3);font-
       <div class="card" style="background:#fff">
         <h4>Örnek içerik brief: "Turkcell One paket karşılaştırma"</h4>
         <ul class="clist dot" style="font-size:.88rem">
-          <li><b>Amaç:</b> Karar aşamasındaki kullanıcıya altı paketin farkını net göstermek; AI atfı için makine okunur tablo sunmak.</li>
+          <li><b>Amaç:</b> Karar aşamasındaki kullanıcıya altı paketin farkını net göstermek; AI <span class="term" data-term="mention">mention</span>'ı için makine okunur tablo sunmak.</li>
           <li><b>Hedef sorular:</b> hangi pakette ne var, en uygun hangisi, HBO Max'li / HBO Max'siz fark, Netflix kademesi.</li>
           <li><b>Yapı:</b> Kısa "nedir" girişi (alıntılanabilir) → karşılaştırma tablosu (paket / platform / Netflix kademesi / fiyat) → değer bloğu (bireysel toplam vs paket) → SSS → CTA.</li>
           <li><b>Schema:</b> <span class="term" data-term="FAQPage Schema">FAQPage</span> + Product + <span class="term" data-term="AggregateOffer">AggregateOffer</span> (lowPrice 330 / highPrice 690 / offerCount 6, TRY) + ItemList; dateModified güncel.</li>
@@ -836,7 +854,7 @@ footer{max-width:var(--maxw);margin:0 auto;padding:22px;color:var(--ink-3);font-
         <tr><td>Kapsam dipnotu (Disney / Spotify / YouTube tipi)</td><td>Tablo dipnotu / FAQ</td><td>disney var mı, youtube aile mi</td><td><span class="pill p-amber">6</span></td></tr>
       </tbody>
     </table></div>
-    <div class="callout callout--info"><b>Not.</b> Bu blokların "nedir + tablo + <span class="term" data-term="FAQPage Schema">FAQ</span>" deseniyle kurulması, AI atfı ve <span class="term" data-term="Long-tail">long-tail</span> görünürlük açısından fayda sağlayabilir; hub içi konumlandırma ile otoritenin hub'da toplanması değerlendirilebilir.</div>
+    <div class="callout callout--info"><b>Not.</b> Bu blokların "nedir + tablo + <span class="term" data-term="FAQPage Schema">FAQ</span>" deseniyle kurulması, AI <span class="term" data-term="mention">mention</span>'ı ve <span class="term" data-term="Long-tail">long-tail</span> görünürlük açısından fayda sağlayabilir; hub içi konumlandırma ile otoritenin hub'da toplanması değerlendirilebilir.</div>
   </section>
 
   <!-- SOZLUK -->
