@@ -15,18 +15,18 @@
   --ink:#16233f; --ink-2:#5a6783; --ink-3:#8d99b2; --line:#e4eaf4; --line-soft:#eef2f9;
   --green:#1f9d57; --green-soft:#dff5e8; --red:#d8463c; --red-soft:#fde6e4; --amber:#d98a00; --amber-soft:#fdf0d6;
   --r-sm:10px; --r-md:14px; --r-lg:18px; --r-xl:22px; --r-pill:999px;
-  --shadow:0 1px 3px rgba(16,35,63,.06),0 1px 2px rgba(16,35,63,.04);
-  --shadow-h:0 10px 30px rgba(16,35,63,.10),0 3px 8px rgba(16,35,63,.05);
+  --shadow:0 2px 10px rgba(16,35,63,.08),0 1px 3px rgba(16,35,63,.05);
+  --shadow-h:0 14px 38px rgba(16,35,63,.15),0 4px 10px rgba(16,35,63,.07);
   --shadow-pop:0 20px 56px rgba(10,33,80,.22);
-  --maxw:1200px;
+  --maxw:1320px;
   --font:"Segoe UI",system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;font-size:clamp(16px,0.5vw + 14.3px,18.5px)}
 body{font-family:var(--font);background:
   radial-gradient(1200px 520px at 85% -8%,rgba(0,194,255,.10),transparent 60%),
   radial-gradient(900px 480px at -5% 2%,rgba(29,90,255,.08),transparent 55%),
-  var(--bg);color:var(--ink);line-height:1.62;font-size:15.5px;-webkit-font-smoothing:antialiased}
+  var(--bg);color:var(--ink);line-height:1.65;font-size:1.02rem;-webkit-font-smoothing:antialiased}
 h1,h2,h3,h4{color:var(--navy-deep);line-height:1.2;font-weight:800;letter-spacing:-.01em}
 a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}
 img{max-width:100%;display:block}
@@ -90,7 +90,7 @@ main{min-width:0}
 .kpi--feat{background:linear-gradient(140deg,var(--navy),var(--blue));border:none}
 .kpi--feat .lab{color:rgba(255,255,255,.82)}.kpi--feat .val{color:#fff}.kpi--feat .sub{background:rgba(255,255,255,.16);color:#fff}
 
-.insight{background:var(--surface-2);border:1px solid var(--line);border-radius:var(--r-md);padding:14px 16px 14px 44px;margin:12px 0;font-size:.95rem;position:relative}
+.insight{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);padding:15px 18px 15px 46px;margin:13px 0;font-size:.98rem;position:relative;box-shadow:var(--shadow)}
 .insight::before{content:"➔";position:absolute;left:15px;top:13px;color:var(--blue);font-weight:800}
 .insight b{color:var(--navy-deep)}
 .callout{border-radius:var(--r-md);padding:14px 16px;margin:14px 0;font-size:.92rem;border:1px solid}.callout b{font-weight:800}
@@ -100,7 +100,7 @@ main{min-width:0}
 
 .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.card{background:var(--surface-2);border:1px solid var(--line);border-radius:var(--r-md);padding:17px;transition:.18s}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);padding:18px;transition:.18s;box-shadow:var(--shadow)}
 .card:hover{box-shadow:var(--shadow);border-color:#d5deee}.card h4{margin:0 0 7px}
 .tag{font-size:.66rem;font-weight:800;text-transform:uppercase;letter-spacing:.05em;padding:3px 9px;border-radius:var(--r-pill);display:inline-block;margin-bottom:9px}
 .t-ed{background:var(--amber-soft);color:#915800}.t-ugc{background:#efe6fb;color:#6b35c9}.t-op{background:var(--blue-soft);color:var(--navy)}.t-tc{background:var(--yellow-soft);color:#8a6a00}
@@ -186,10 +186,25 @@ tbody tr:nth-child(even){background:var(--surface-2)}tbody tr:hover{background:v
 .pin{position:absolute;width:24px;height:24px;border-radius:50%;background:var(--coral);color:#fff;font-weight:800;font-size:.78rem;display:grid;place-items:center;box-shadow:0 3px 10px rgba(226,80,63,.5);border:2px solid #fff}
 
 .term{border-bottom:1px dotted var(--blue);cursor:help;font-weight:600;color:var(--navy);position:relative}
-.term::after{content:attr(data-tip);position:absolute;left:50%;bottom:135%;transform:translateX(-50%) translateY(4px);background:var(--navy-deep);color:#fff;font-weight:500;font-size:.76rem;line-height:1.4;padding:8px 11px;border-radius:9px;width:max-content;max-width:260px;box-shadow:var(--shadow-pop);opacity:0;pointer-events:none;transition:.15s;z-index:90;white-space:normal;text-align:left}
-.term::before{content:"";position:absolute;left:50%;bottom:135%;transform:translateX(-50%);border:6px solid transparent;border-top-color:var(--navy-deep);opacity:0;transition:.15s;z-index:90}
-.term:hover::after,.term:hover::before{opacity:1;transform:translateX(-50%) translateY(0)}
-@media(hover:none){.term::after,.term::before{display:none}}
+/* data-term tooltip: fixed katmanda, ekrana sığan, her elementin üstünde */
+.termtip{position:fixed;z-index:9999;background:var(--navy-deep);color:#fff;font-weight:500;font-size:.92rem;line-height:1.5;padding:11px 14px;border-radius:11px;max-width:min(360px,92vw);box-shadow:var(--shadow-pop);opacity:0;pointer-events:none;transition:opacity .12s,transform .12s;transform:translateY(5px);text-align:left}
+.termtip.show{opacity:1;transform:none}
+.termtip::after{content:"";position:absolute;left:var(--ax,50%);top:100%;transform:translateX(-50%);border:7px solid transparent;border-top-color:var(--navy-deep)}
+.termtip.below::after{top:auto;bottom:100%;border-top-color:transparent;border-bottom-color:var(--navy-deep)}
+
+/* mobil İçindekiler (ToC) */
+.toc-fab{display:none}
+.toc-sheet{display:none}
+@media(max-width:900px){
+  .toc-fab{display:inline-flex;align-items:center;gap:7px;position:fixed;right:14px;bottom:16px;z-index:70;background:var(--navy);color:#fff;font-weight:800;font-size:.88rem;border:none;padding:12px 18px;border-radius:var(--r-pill);box-shadow:var(--shadow-pop);font-family:inherit}
+  .toc-sheet.open{display:block;position:fixed;inset:0;z-index:75}
+  .toc-sheet__bg{position:absolute;inset:0;background:rgba(8,18,40,.5)}
+  .toc-sheet__panel{position:absolute;left:0;right:0;bottom:0;max-height:76vh;overflow:auto;background:var(--surface);border-radius:18px 18px 0 0;padding:14px 14px 24px;box-shadow:var(--shadow-pop)}
+  .toc-sheet__panel h4{font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-3);margin:6px 10px 10px;display:flex;justify-content:space-between;align-items:center}
+  .toc-sheet__panel a{display:flex;align-items:center;gap:10px;padding:11px 12px;border-radius:10px;color:var(--ink-2);font-size:.95rem;font-weight:700;border-bottom:1px solid var(--line-soft)}
+  .toc-sheet__panel a .n{width:22px;height:22px;border-radius:6px;background:var(--surface-2);color:var(--ink-3);font-size:.66rem;font-weight:800;display:grid;place-items:center;flex:none}
+  .toc-close{border:none;background:var(--surface-2);width:28px;height:28px;border-radius:50%;font-size:1.1rem;color:var(--ink-2)}
+}
 
 footer{max-width:var(--maxw);margin:0 auto;padding:22px;color:var(--ink-3);font-size:.8rem;text-align:center}
 
@@ -703,8 +718,8 @@ footer{max-width:var(--maxw);margin:0 auto;padding:22px;color:var(--ink-3);font-
       <div class="table-wrap"><table>
         <thead><tr><th>Öneri</th><th>Detay</th><th>Öncelik</th></tr></thead>
         <tbody>
-          <tr><td><span class="term" data-term="Title Tag">Title</span> tazeliği</td><td>"Turkcell One ile Tüm Platformlar Tek Paket | Turkcell" yönünde güncelleme</td><td><span class="prio prio-yuk">Yüksek</span></td></tr>
-          <tr><td><span class="term" data-term="Meta Description">Description</span> tazeliği</td><td>Dijital abonelik paketi ve tek fatura vurgusuyla güncel açıklama</td><td><span class="prio prio-yuk">Yüksek</span></td></tr>
+          <tr><td><span class="term" data-term="Title Tag">Meta Title</span></td><td>"Turkcell One ile Tüm Platformlar Tek Paket | Turkcell" yönünde güncelleme</td><td><span class="prio prio-yuk">Yüksek</span></td></tr>
+          <tr><td><span class="term" data-term="Meta Description">Meta Description</span></td><td>Dijital abonelik paketi ve tek fatura vurgusuyla güncel açıklama</td><td><span class="prio prio-yuk">Yüksek</span></td></tr>
           <tr><td><span class="term" data-term="FAQPage Schema">FAQPage</span> tam kapsam</td><td>Tüm soru ve cevapların işaretlenmesi ve güncel tutulması</td><td><span class="prio prio-yuk">Yüksek</span></td></tr>
           <tr><td>Başlık hiyerarşisi</td><td>Banner metinlerinin H2'den standart metne taşınması</td><td><span class="prio prio-ort">Orta</span></td></tr>
           <tr><td>URL ve <span class="term" data-term="Canonical">canonical</span></td><td>Sonda "/" tutarlılığının gözden geçirilmesi</td><td><span class="prio prio-ort">Orta</span></td></tr>
@@ -803,6 +818,9 @@ footer{max-width:var(--maxw);margin:0 auto;padding:22px;color:var(--ink-3);font-
   </main>
 </div>
 
+<button class="toc-fab" id="tocFab">☰ Bölümler</button>
+<div class="toc-sheet" id="tocSheet"><div class="toc-sheet__bg" data-tocclose></div><div class="toc-sheet__panel"><h4>Bölümler <button class="toc-close" data-tocclose aria-label="Kapat">&times;</button></h4><div id="tocLinks"></div></div></div>
+
 <div class="lightbox" id="lightbox"><span class="lightbox__close" id="lbClose">&times;</span><img id="lbImg" src="" alt=""><div class="lightbox__cap" id="lbCap"></div></div>
 
 <footer>Turkcell One · Rakip Analizi &amp; SEO / GEO Değerlendirmesi · Inbound SEO · 15 Haziran 2026 · Veri: DataForSEO (TR) + Ahrefs çapraz + canlı SERP / AI Overview. Hacimler aylık aramadır. Rakip veriler anlık gözlemdir.</footer>
@@ -837,6 +855,30 @@ const GLOSSARY={
  "CTR":"Click Through Rate: tıklama oranı."
 };
 document.querySelectorAll('.term').forEach(el=>{const k=el.dataset.term;if(GLOSSARY[k])el.dataset.tip=GLOSSARY[k];});
+/* data-term tooltip: fixed katman, ekrana sığan, tüm elementlerin üstünde */
+const _tip=document.createElement('div');_tip.className='termtip';document.body.appendChild(_tip);let _tipEl=null;
+function _showTip(el){const t=el.dataset.tip;if(!t)return;_tip.textContent=t;_tip.classList.add('show');_tip.classList.remove('below');_tip.style.left='0px';_tip.style.top='-9999px';
+  const r=el.getBoundingClientRect(),tw=_tip.offsetWidth,th=_tip.offsetHeight;
+  let left=Math.max(8,Math.min(r.left+r.width/2-tw/2,innerWidth-tw-8)),top=r.top-th-12;
+  if(top<8){top=r.bottom+12;_tip.classList.add('below');}
+  _tip.style.left=left+'px';_tip.style.top=top+'px';
+  _tip.style.setProperty('--ax',Math.max(14,Math.min(r.left+r.width/2-left,tw-14))+'px');_tipEl=el;}
+function _hideTip(){_tip.classList.remove('show');_tipEl=null;}
+document.querySelectorAll('.term').forEach(el=>{
+  el.addEventListener('mouseenter',()=>_showTip(el));
+  el.addEventListener('mouseleave',_hideTip);
+  el.addEventListener('click',e=>{e.stopPropagation();_tipEl===el?_hideTip():_showTip(el);});
+});
+addEventListener('scroll',_hideTip,{passive:true});addEventListener('resize',_hideTip);
+document.addEventListener('click',e=>{if(!e.target.closest('.term'))_hideTip();});
+/* mobil ToC */
+(function(){const fab=document.getElementById('tocFab'),sheet=document.getElementById('tocSheet'),links=document.getElementById('tocLinks');if(!fab)return;
+  links.innerHTML=[...document.querySelectorAll('.sidenav a')].map(a=>a.outerHTML).join('');
+  const close=()=>sheet.classList.remove('open');
+  fab.addEventListener('click',()=>sheet.classList.add('open'));
+  sheet.querySelectorAll('[data-tocclose]').forEach(e=>e.addEventListener('click',close));
+  links.querySelectorAll('a').forEach(a=>a.addEventListener('click',close));
+})();
 
 const navLinks=[...document.querySelectorAll('.sidenav a')];
 const secs=navLinks.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);
